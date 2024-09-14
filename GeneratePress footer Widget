@@ -1,0 +1,95 @@
+<!-- wp:generateblocks/container {"uniqueId":"c13ca7a2","borderColor":"rgba(18, 18, 18, 0.07)","backgroundColor":"var(\u002d\u002dcontrast)","isDynamic":true,"blockVersion":3,"useInnerContainer":true,"paddingTop":"40","paddingRight":"20","paddingBottom":"5","paddingLeft":"20","borderSizeTop":"1"} -->
+<!-- wp:generateblocks/grid {"uniqueId":"afed7276","columns":3,"horizontalGap":30,"verticalGap":30,"horizontalAlignment":"center","isDynamic":true,"blockVersion":3,"useLegacyRowGap":true} -->
+<!-- wp:generateblocks/container {"uniqueId":"5ab3db75","isGrid":true,"gridId":"afed7276","verticalAlignment":"center","isDynamic":true,"blockVersion":3,"useInnerContainer":true,"sizing":{"width":"45%","widthTablet":"45%","widthMobile":"100%"},"marginRight":"30","marginRightMobile":"10","marginLeftMobile":"10","paddingTop":"0","paddingRight":"0","paddingBottom":"0","paddingLeft":"0"} -->
+<!-- wp:generateblocks/container {"uniqueId":"1502688a","isDynamic":true,"blockVersion":3,"useInnerContainer":true} -->
+<!-- wp:generateblocks/headline {"uniqueId":"13f3887f","element":"h4","blockVersion":2,"display":"flex","alignItems":"center","fontWeight":"bold","fontSize":24,"backgroundColor":"","textColor":"var(\u002d\u002dbase-3)","linkColor":"","linkColorHover":"","borderColor":"","highlightTextColor":"","iconColor":""} -->
+<h4 class="gb-headline gb-headline-13f3887f gb-headline-text">Website Name</h4>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"fa10744f","element":"p","blockVersion":2,"fontSize":14,"backgroundColor":"","textColor":"var(\u002d\u002dcontrast-3)","linkColor":"","linkColorHover":"","borderColor":"","highlightTextColor":"","iconColor":""} -->
+<p class="gb-headline gb-headline-fa10744f gb-headline-text">WP Jankari is an Online Learning Platform. Here you can learn WordPress website development. We publish all the information about WordPress website through this Blog Website.</p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"b0e96d4f","isDynamic":true,"blockVersion":3,"useInnerContainer":true} -->
+<!-- wp:generateblocks/button-container {"uniqueId":"a01a8dca","alignment":"left","isDynamic":true,"blockVersion":2} -->
+<!-- wp:generateblocks/button {"uniqueId":"6cf3b6d8","hasUrl":true,"target":true,"relNoFollow":true,"blockVersion":3,"hasButtonContainer":true,"display":"inline-flex","alignItems":"center","justifyContent":"center","alignment":"center","marginRight":"30","marginBottom":"20","textColor":"var(\u002d\u002dbase)","textColorHover":"#bbbbbb","hasIcon":true,"removeText":true} -->
+<a class="gb-button gb-button-6cf3b6d8" href="#" target="_blank" rel="nofollow noopener noreferrer"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></span></a>
+<!-- /wp:generateblocks/button -->
+
+<!-- wp:generateblocks/button {"uniqueId":"f28bd947","hasUrl":true,"target":true,"relNoFollow":true,"blockVersion":3,"hasButtonContainer":true,"display":"inline-flex","alignItems":"center","justifyContent":"center","alignment":"center","marginRight":"30","marginBottom":"20","textColor":"var(\u002d\u002dbase)","textColorHover":"#bbbbbb","hasIcon":true,"removeText":true} -->
+<a class="gb-button gb-button-f28bd947" href="#" target="_blank" rel="nofollow noopener noreferrer"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></span></a>
+<!-- /wp:generateblocks/button -->
+
+<!-- wp:generateblocks/button {"uniqueId":"c0b0a68d","hasUrl":true,"target":true,"relNoFollow":true,"blockVersion":3,"hasButtonContainer":true,"display":"inline-flex","alignItems":"center","justifyContent":"center","alignment":"center","marginRight":"30","marginBottom":"20","textColor":"var(\u002d\u002dbase)","textColorHover":"#bbbbbb","hasIcon":true,"removeText":true} -->
+<a class="gb-button gb-button-c0b0a68d" href="#" target="_blank" rel="nofollow noopener noreferrer"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></span></a>
+<!-- /wp:generateblocks/button -->
+
+<!-- wp:generateblocks/button {"uniqueId":"d22b2f7f","hasUrl":true,"target":true,"relNoFollow":true,"blockVersion":3,"hasButtonContainer":true,"display":"inline-flex","alignItems":"center","justifyContent":"center","alignment":"center","marginRight":"30","marginBottom":"20","textColor":"var(\u002d\u002dbase)","textColorHover":"#bbbbbb","hasIcon":true,"removeText":true} -->
+<a class="gb-button gb-button-d22b2f7f" href="#" target="_blank" rel="nofollow noopener noreferrer"><span class="gb-icon"><svg aria-hidden="true" role="img" height="1em" width="1em" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></span></a>
+<!-- /wp:generateblocks/button -->
+<!-- /wp:generateblocks/button-container -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"0f91740e","isGrid":true,"gridId":"afed7276","isDynamic":true,"blockVersion":3,"useInnerContainer":true,"sizing":{"width":"26%","widthTablet":"25%","widthMobile":"100%"},"paddingTop":"0","paddingRight":"0","paddingBottom":"0","paddingLeft":"0"} -->
+<!-- wp:generateblocks/headline {"uniqueId":"4da1108d","element":"h6","blockVersion":2,"fontWeight":"500","fontSize":16,"backgroundColor":"","textColor":"var(\u002d\u002dbase-3)","linkColor":"","linkColorHover":"","borderColor":"","iconColor":""} -->
+<h6 class="gb-headline gb-headline-4da1108d gb-headline-text">Categorys</h6>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"ac0e08e5","element":"p","blockVersion":2,"textTransform":"capitalize","fontSize":14,"marginBottom":"10","backgroundColor":"","textColor":"var(\u002d\u002dbase-3)","linkColor":"var(\u002d\u002dcontrast-3)","linkColorHover":"var(\u002d\u002daccent-hover)","borderColor":"","highlightTextColor":"","iconColor":""} -->
+<p class="gb-headline gb-headline-ac0e08e5 gb-headline-text"><a href="#" data-type="URL" data-id="https://images.wpjankari.com/category/love/">Category 1</a></p>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"aff8ab09","element":"p","blockVersion":2,"textTransform":"capitalize","fontSize":14,"marginBottom":"10","backgroundColor":"","textColor":"var(\u002d\u002dcontrast-3)","linkColor":"var(\u002d\u002dcontrast-3)","linkColorHover":"var(\u002d\u002daccent-hover)","borderColor":"","highlightTextColor":"","iconColor":""} -->
+<p class="gb-headline gb-headline-aff8ab09 gb-headline-text"><a href="#" data-type="URL" data-id="https://images.wpjankari.com/category/wishes/">Category 2</a></p>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"52215350","element":"p","blockVersion":2,"textTransform":"capitalize","fontSize":14,"marginBottom":"10","backgroundColor":"","textColor":"var(\u002d\u002dcontrast)","linkColor":"var(\u002d\u002dcontrast-3)","linkColorHover":"var(\u002d\u002daccent-hover)","borderColor":"","highlightTextColor":"","iconColor":""} -->
+<p class="gb-headline gb-headline-52215350 gb-headline-text"><a href="#" data-type="URL" data-id="https://images.wpjankari.com/category/events/">Category 3</a></p>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"f8cf8a65","element":"p","blockVersion":2,"textTransform":"capitalize","fontSize":14,"marginBottom":"0","backgroundColor":"","textColor":"var(\u002d\u002dcontrast)","linkColor":"var(\u002d\u002dcontrast-3)","linkColorHover":"var(\u002d\u002daccent-hover)","borderColor":"","highlightTextColor":"","iconColor":""} -->
+<p class="gb-headline gb-headline-f8cf8a65 gb-headline-text"><a href="#" data-type="URL" data-id="https://images.wpjankari.com/category/anniversary/">Category 4</a></p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"fe8be43b","isGrid":true,"gridId":"afed7276","isDynamic":true,"blockVersion":3,"useInnerContainer":true,"sizing":{"width":"26%","widthTablet":"25%","widthMobile":"100%"},"paddingTop":"0","paddingRight":"0","paddingBottom":"0","paddingLeft":"0"} -->
+<!-- wp:generateblocks/headline {"uniqueId":"e1da985c","element":"h6","blockVersion":2,"fontWeight":"500","fontSize":16,"backgroundColor":"","textColor":"var(\u002d\u002dbase-3)","linkColor":"","linkColorHover":"","borderColor":""} -->
+<h6 class="gb-headline gb-headline-e1da985c gb-headline-text">Site Links</h6>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"5ddf5cb5","element":"p","blockVersion":2,"textTransform":"capitalize","fontSize":14,"marginBottom":"10","backgroundColor":"","textColor":"var(\u002d\u002dcontrast)","linkColor":"var(\u002d\u002dcontrast-3)","linkColorHover":"var(\u002d\u002daccent-hover)","borderColor":"","highlightTextColor":"","iconColor":""} -->
+<p class="gb-headline gb-headline-5ddf5cb5 gb-headline-text"><a href="#" data-type="URL" data-id="https://images.wpjankari.com/about-us/">About Us</a></p>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"c59ba1cd","element":"p","blockVersion":2,"textTransform":"capitalize","fontSize":14,"marginBottom":"10","backgroundColor":"","textColor":"var(\u002d\u002dcontrast)","linkColor":"var(\u002d\u002dcontrast-3)","linkColorHover":"var(\u002d\u002daccent-hover)","borderColor":"","iconColor":""} -->
+<p class="gb-headline gb-headline-c59ba1cd gb-headline-text"><a href="#" data-type="URL" data-id="https://images.wpjankari.com/disclaimer/">Disclaimer</a></p>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"96939281","element":"p","blockVersion":2,"textTransform":"capitalize","fontSize":14,"marginBottom":"10","backgroundColor":"","textColor":"var(\u002d\u002dcontrast)","linkColor":"var(\u002d\u002dcontrast-3)","linkColorHover":"var(\u002d\u002daccent-hover)","borderColor":"","highlightTextColor":"","iconColor":""} -->
+<p class="gb-headline gb-headline-96939281 gb-headline-text"><a href="#" data-type="URL" data-id="https://images.wpjankari.com/contact-us/">Contact Us</a></p>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"86a5ffed","element":"p","blockVersion":2,"textTransform":"capitalize","fontSize":14,"marginBottom":"0","backgroundColor":"","textColor":"var(\u002d\u002dcontrast)","linkColor":"var(\u002d\u002dcontrast-3)","linkColorHover":"var(\u002d\u002daccent-hover)","borderColor":"","highlightTextColor":"","iconColor":""} -->
+<p class="gb-headline gb-headline-86a5ffed gb-headline-text"><a href="#" data-type="URL" data-id="https://images.wpjankari.com/privacy-policy/">Privacy Policy</a></p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"6c410209","backgroundColor":"#1d1d1d","isDynamic":true,"blockVersion":3,"useInnerContainer":true,"paddingTop":"20","paddingRight":"20","paddingBottom":"25","paddingLeft":"20"} -->
+<!-- wp:generateblocks/grid {"uniqueId":"96d7f280","columns":2,"horizontalGap":30,"verticalGap":30,"horizontalAlignment":"center","isDynamic":true,"blockVersion":3,"useLegacyRowGap":true} -->
+<!-- wp:generateblocks/container {"uniqueId":"214b20c5","isGrid":true,"gridId":"96d7f280","removeVerticalGap":true,"removeVerticalGapTablet":true,"removeVerticalGapMobile":true,"isDynamic":true,"blockVersion":3,"useInnerContainer":true,"sizing":{"width":"50%","widthMobile":"100%"},"marginBottomMobile":"10","paddingTop":"0","paddingRight":"0","paddingBottom":"0","paddingLeft":"0"} -->
+<!-- wp:generateblocks/headline {"uniqueId":"4086ad29","element":"p","blockVersion":2,"alignmentMobile":"center","fontSize":13,"letterSpacing":0.04,"marginBottom":"0","backgroundColor":"","textColor":"var(\u002d\u002dbase)","linkColor":"var(\u002d\u002dbase-2)","linkColorHover":"var(\u002d\u002dbase)","borderColor":"","highlightTextColor":"","iconColor":""} -->
+<p class="gb-headline gb-headline-4086ad29 gb-headline-text">© WebsiteName | All rights reserved</p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"72705691","isGrid":true,"gridId":"96d7f280","removeVerticalGap":true,"removeVerticalGapTablet":true,"removeVerticalGapMobile":true,"isDynamic":true,"blockVersion":3,"useInnerContainer":true,"sizing":{"width":"50%","widthMobile":"100%"},"alignmentMobile":"center","paddingTop":"0","paddingRight":"0","paddingBottom":"0","paddingLeft":"0"} -->
+<!-- wp:generateblocks/headline {"uniqueId":"4b7e9038","element":"p","blockVersion":2,"textTransform":"capitalize","alignment":"right","alignmentMobile":"center","fontSize":13,"letterSpacing":0.04,"marginBottom":"0","backgroundColor":"","textColor":"var(\u002d\u002dbase)","linkColor":"var(\u002d\u002dbase)","linkColorHover":"#c5c5c5","borderColor":"","highlightTextColor":"","iconColor":""} -->
+<p class="gb-headline gb-headline-4b7e9038 gb-headline-text"><a href="#" data-type="URL" data-id="https://images.wpjankari.com/privacy-policy/">Privacy Policy</a> | <a href="#" data-type="URL" data-id="https://images.wpjankari.com/disclaimer/">Disclaimer</a></p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/container -->
