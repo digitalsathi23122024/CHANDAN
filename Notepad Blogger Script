@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.3.0' expr:dir='data:blog.languageDirection' expr:lang='data:blog.languageCode'>
+
+<head>
+  <meta charset='UTF-8'/>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'/>
+  <title><data:blog.pageTitle/></title>
+  
+  <b:include data='blog' name='all-head-content'/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  
+  <b:skin><![CDATA[
+    :root {
+      --bg-color: #f8fafc; --text-color: #1e293b; --text-secondary: #64748b; --border-color: #e2e8f0; --primary-color: #3b82f6; --primary-hover-color: #2563eb; --primary-light: #dbeafe; --danger-color: #ef4444; --danger-hover-color: #dc2626; --success-color: #10b981; --success-hover-color: #059669; --warning-color: #f59e0b; --note-bg-color: #ffffff; --header-bg-color: #ffffff; --box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); --box-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); --modal-bg-color: rgba(0, 0, 0, 0.5); --backdrop-blur: blur(8px); --border-radius: 8px; --border-radius-lg: 12px; --social-color: #1d9bf0; --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%); --gradient-success: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); --gradient-danger: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%);
+    }
+    .dark-mode {
+      --bg-color: #0f172a; --text-color: #f1f5f9; --text-secondary: #94a3b8; --border-color: #334155; --primary-color: #60a5fa; --primary-hover-color: #3b82f6; --primary-light: #1e3a8a; --danger-color: #f87171; --danger-hover-color: #ef4444; --success-color: #34d399; --success-hover-color: #10b981; --warning-color: #fbbf24; --note-bg-color: #1e293b; --header-bg-color: #1e293b; --box-shadow: 0 1px 3px 0 rgb(255 255 255 / 0.1), 0 1px 2px -1px rgb(255 255 255 / 0.1); --box-shadow-lg: 0 10px 15px -3px rgb(255 255 255 / 0.1), 0 4px 6px -4px rgb(255 255 255 / 0.1); --modal-bg-color: rgba(0, 0, 0, 0.7); --social-color: #60a5fa;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: 'Inter', 'Poppins', sans-serif; background: var(--bg-color); color: var(--text-color); margin: 0; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; transition: all 0.3s ease; }
+    .main-content-wrapper { flex: 1; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 20px; box-sizing: border-box; }
+    .hidden { display: none !important; }
+    .post-body, .blog-posts { display: none !important; }
+    #auth-modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--modal-bg-color); backdrop-filter: var(--backdrop-blur); display: flex; align-items: center; justify-content: center; z-index: 1001; animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    #auth-container { max-width: 450px; width: 90%; padding: 40px; background: var(--note-bg-color); border-radius: var(--border-radius-lg); box-shadow: var(--box-shadow-lg); position: relative; animation: slideUp 0.4s ease; border: 1px solid var(--border-color); }
+    .close-modal { position: absolute; top: 15px; right: 20px; font-size: 24px; font-weight: bold; cursor: pointer; color: var(--text-secondary); opacity: 0.7; transition: all 0.2s ease; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: transparent; }
+    .auth-form h2 { text-align: center; margin-top: 0; margin-bottom: 30px; font-weight: 700; font-size: 28px; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .form-group { margin-bottom: 24px; position: relative; }
+    .form-group label { display: block; margin-bottom: 8px; font-weight: 500; font-size: 14px; color: var(--text-color); }
+    .form-group input { width: 100%; padding: 14px 16px; border: 2px solid var(--border-color); border-radius: var(--border-radius); background-color: var(--bg-color); color: var(--text-color); font-size: 16px; font-family: 'Inter', sans-serif; transition: all 0.3s ease; outline: none; }
+    .auth-btn { width: 100%; padding: 14px; border: none; border-radius: var(--border-radius); background: var(--gradient-primary); color: #fff; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; font-family: 'Inter', sans-serif; }
+    .auth-error, .auth-success { text-align: center; margin-top: 15px; min-height: 1.2em; font-size: 14px; font-weight: 500; padding: 8px; border-radius: var(--border-radius); }
+    .auth-error { color: var(--danger-color); background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); }
+    .auth-success { color: var(--success-color); background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); }
+    .auth-toggle-link, .forgot-password-link { text-align: center; margin-top: 20px; font-size: 14px; color: var(--text-secondary); }
+    .auth-toggle-link a, .forgot-password-link a { color: var(--primary-color); text-decoration: none; font-weight: 600; cursor: pointer; }
+    .header { background: var(--header-bg-color); padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: var(--box-shadow); border-bottom: 1px solid var(--border-color); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; }
+    .header h1 { margin: 0; font-size: 28px; font-weight: 700; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .header-controls { display: flex; align-items: center; gap: 15px; }
+    .dark-mode-toggle { cursor: pointer; font-size: 20px; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--border-color); transition: all 0.3s ease; }
+    .btn { color: white; border: none; padding: 12px 20px; border-radius: var(--border-radius); cursor: pointer; font-size: 14px; font-weight: 600; transition: all 0.3s ease; font-family: 'Inter', sans-serif; }
+    #create-note { background: var(--gradient-success); }
+    #login-prompt-btn { background: var(--gradient-primary); }
+    #logout-btn { background: var(--gradient-danger); }
+    .note { background: var(--note-bg-color); border: 1px solid var(--border-color); border-radius: var(--border-radius-lg); margin-bottom: 25px; box-shadow: var(--box-shadow); border-top: 4px solid var(--warning-color); overflow: hidden; transition: all 0.3s ease; }
+    .note.confirmed { border-top-color: var(--success-color); }
+    .note-inner-padding { padding: 24px; }
+    .note-title { width: 100%; border: none; padding-bottom: 12px; font-size: 22px; font-weight: 600; background: transparent; color: var(--text-color); margin-bottom: 16px; border-bottom: 2px solid var(--border-color); font-family: 'Inter', sans-serif; outline: none; }
+    .note-content { width: 100%; border: none; min-height: 200px; font-size: 16px; background: transparent; color: var(--text-color); resize: vertical; font-family: 'Inter', sans-serif; line-height: 1.7; outline: none; }
+    .note-footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 15px; background: var(--bg-color); padding: 16px 24px; border-top: 1px solid var(--border-color); }
+    .note-timestamps { display: flex; flex-direction: column; gap: 4px; }
+    .note-timestamp, .confirmation-date, .share-date { font-size: 12px; color: var(--text-secondary); font-weight: 500; }
+    .confirmation-date { color: var(--success-color); }
+    .share-date { color: var(--social-color); }
+    .note-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .status-btn { border: 2px solid; background-color: transparent; padding: 6px 12px; font-size: 12px; font-weight: 600; border-radius: var(--border-radius); cursor: pointer; transition: all 0.3s ease; }
+    .confirm-btn { border-color: var(--success-color); color: var(--success-color); }
+    .confirm-btn:hover { background-color: var(--success-color); color: white; }
+    .share-btn { border-color: var(--social-color); color: var(--social-color); }
+    .share-btn:hover { background-color: var(--social-color); color: white; }
+    .delete-note { background-color: transparent; color: var(--danger-color); border: 2px solid var(--danger-color); padding: 6px 12px; border-radius: var(--border-radius); cursor: pointer; font-size: 12px; font-weight: 600; transition: all 0.3s ease; }
+    .delete-note:hover { background-color: var(--danger-color); color: white; }
+    .footer-section { border-top: 1px solid var(--border-color); padding: 30px 20px; text-align: center; font-size: 14px; color: var(--text-secondary); background: var(--header-bg-color); font-weight: 500; }
+    @media (max-width: 768px) {
+      .header { padding: 15px 20px; flex-direction: column; gap: 15px; }
+      .header-controls { width: 100%; justify-content: center; }
+      .container { padding: 15px; }
+      .note-footer { flex-direction: column; align-items: flex-start; }
+    }
+    .empty-state { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+    .empty-state h3 { font-size: 24px; font-weight: 600; margin-bottom: 10px; color: var(--text-color); }
+  ]]></b:skin>
+</head>
+
+<body>
+  <div class='main-content-wrapper'>
+      <header class='header'>
+          <h1 id="main-title">SaveText</h1>
+          <div class='header-controls'>
+              <div class='dark-mode-toggle' id='dark-mode-toggle' title='Toggle Dark Mode'>🌙</div>
+              <button id='create-note' class='btn'>+ New Note</button>
+              <button id='login-prompt-btn' class='btn'>Login to Sync</button>
+              <button id='logout-btn' class='btn hidden'>Logout</button>
+          </div>
+      </header>
+      <div id="notepad-container" class="container">
+          <main id='notes-container'></main>
+      </div>
+  </div>
+
+  <div id="auth-modal" class="hidden">
+    <div id="auth-container">
+      <span id="close-modal" class="close-modal" title="Close">&#215;</span>
+      <form id="login-form" class="auth-form"><h2 class="auth-title">Welcome Back</h2><div class="form-group"><label for="login-email">Email</label><input type="email" id="login-email" required="true" placeholder="Enter your email"/></div><div class="form-group"><label for="login-password">Password</label><input type="password" id="login-password" required="true" placeholder="Enter your password"/></div><button type="submit" class="auth-btn">Sign In</button><div class="forgot-password-link"><a id="show-forgot-password-link">Forgot password?</a></div><p id="login-error" class='auth-error'></p><p id="login-success" class='auth-success'></p><div class="auth-toggle-link">Don't have an account? <a id="show-signup-link">Create one</a></div></form>
+      <form id="signup-form" class="auth-form hidden"><h2 class="auth-title">Create Account</h2><div class="form-group"><label for="signup-email">Email</label><input type="email" id="signup-email" required="true" placeholder="Enter your email"/></div><div class="form-group"><label for="signup-password">Password</label><input type="password" id="signup-password" required="true" placeholder="Create a password"/></div><button type="submit" class="auth-btn">Create Account</button><p id="signup-error" class='auth-error'></p><p id="signup-success" class='auth-success'></p><div class="auth-toggle-link">Already have an account? <a id="show-login-link">Sign in</a></div></form>
+      <form id="forgot-password-form" class="auth-form hidden"><h2 class="auth-title">Reset Password</h2><p style="text-align: center; color: var(--text-secondary); margin-bottom: 25px; font-size: 14px;">Enter your email to get a reset link.</p><div class="form-group"><label for="reset-email">Email</label><input type="email" id="reset-email" required="true" placeholder="Enter your email"/></div><button type="submit" class="auth-btn">Send Reset Link</button><p id="reset-error" class='auth-error'></p><p id="reset-success" class='auth-success'></p><div class="auth-toggle-link">Back to <a id="show-login-from-forgot-link">Sign in</a></div></form>
+    </div>
+  </div>
+
+  <footer class='footer-section'>
+     <div id='copyright-note'>&#169; <span id='copyright-year'></span> SaveText | All Rights Reserved</div>
+  </footer>
+
+  <b:section class='blog-posts' id='blog-posts' showaddelement='no'>
+    <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2'>
+      <b:includable id='main'><b:loop values='data:posts' var='post'><div class='post-body'><data:post.body/></div></b:loop></b:includable>
+    </b:widget>
+  </b:section>
+  
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <script>
+  //<![CDATA[
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Firebase Configuration ---
+        const firebaseConfig = {
+            apiKey: "AIzaSyAbFrn5nfg6P7eNVEvU1M1YH0cXJpOUWTg",
+            authDomain: "note-pad-76c16.firebaseapp.com",
+            projectId: "note-pad-76c16",
+            storageBucket: "note-pad-76c16.firebasestorage.app",
+            messagingSenderId: "165956293050",
+            appId: "1:165956293050:web:c078f484936bf5ab398d83"
+        };
+        
+        // --- Initialize Firebase and Services ---
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // --- DOM Element Selection ---
+        const notesContainer = document.getElementById('notes-container');
+        const createNoteBtn = document.getElementById('create-note');
+        const loginPromptBtn = document.getElementById('login-prompt-btn');
+        const logoutBtn = document.getElementById('logout-btn');
+        const authModal = document.getElementById('auth-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const forgotPasswordForm = document.getElementById('forgot-password-form');
+        const showSignupLink = document.getElementById('show-signup-link');
+        const showLoginLink = document.getElementById('show-login-link');
+        const showForgotPasswordLink = document.getElementById('show-forgot-password-link');
+        const showLoginFromForgotLink = document.getElementById('show-login-from-forgot-link');
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const copyrightYear = document.getElementById('copyright-year');
+        
+        // --- Global State Variables ---
+        let currentUser = null;
+        let notesCollection = null;
+        let firestoreUnsubscribe = null;
+
+        // --- Initial Setup ---
+        if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
+
+        // --- Dark Mode Functionality ---
+        const applyDarkMode = (isDark) => {
+            document.body.classList.toggle('dark-mode', isDark);
+            if (darkModeToggle) darkModeToggle.textContent = isDark ? '☀️' : '🌙';
+            localStorage.setItem('darkMode', isDark ? 'true' : 'false');
+        };
+        if (darkModeToggle) darkModeToggle.addEventListener('click', () => applyDarkMode(!document.body.classList.contains('dark-mode')));
+        applyDarkMode(localStorage.getItem('darkMode') === 'true');
+
+        // --- Local Storage Helpers ---
+        const getLocalNotes = () => JSON.parse(localStorage.getItem('localNotes') || '[]');
+        const saveLocalNotes = (notes) => localStorage.setItem('localNotes', JSON.stringify(notes));
+
+        // --- Auth UI Helpers ---
+        const showAuthMessage = (form, message, isSuccess = false) => {
+            if (!form) return;
+            const errorEl = form.querySelector('.auth-error');
+            const successEl = form.querySelector('.auth-success');
+            if (errorEl) errorEl.textContent = '';
+            if (successEl) successEl.textContent = '';
+            const targetEl = isSuccess ? successEl : errorEl;
+            if (targetEl) targetEl.textContent = message;
+        };
+
+        const showAuthForm = (formToShow) => {
+            if (!authModal) return;
+            [loginForm, signupForm, forgotPasswordForm].forEach(form => {
+                if (form) form.classList.toggle('hidden', form !== formToShow);
+            });
+            showAuthMessage(loginForm, '');
+            showAuthMessage(signupForm, '');
+            showAuthMessage(forgotPasswordForm, '');
+        };
+        
+        // --- Note Rendering ---
+        const renderNotes = (notes) => {
+            if (!notesContainer) return;
+            notesContainer.innerHTML = '';
+            if (!notes || notes.length === 0) {
+                notesContainer.innerHTML = `<div class="empty-state"><h3>No Notes Yet</h3><p>Click the "+ New Note" button to get started.</p></div>`;
+                return;
+            }
+            notes.forEach(note => notesContainer.appendChild(createNoteElement(note)));
+        };
+
+        const createNoteElement = (note) => {
+            const noteDiv = document.createElement('div');
+            noteDiv.className = note.isConfirmed ? 'note confirmed' : 'note';
+            noteDiv.dataset.id = note.id;
+
+            const innerPaddingDiv = document.createElement('div');
+            innerPaddingDiv.className = 'note-inner-padding';
+            const titleInput = document.createElement('input');
+            titleInput.className = 'note-title';
+            titleInput.value = note.title || '';
+            const contentTextarea = document.createElement('textarea');
+            contentTextarea.className = 'note-content';
+            contentTextarea.value = note.content || '';
+            innerPaddingDiv.append(titleInput, contentTextarea);
+            
+            const footerDiv = document.createElement('div');
+            footerDiv.className = 'note-footer';
+            const timestampsDiv = document.createElement('div');
+            timestampsDiv.className = 'note-timestamps';
+            const createdSpan = document.createElement('span');
+            createdSpan.className = 'note-timestamp';
+            createdSpan.textContent = `Created: ${new Date(note.createdAt?.toDate?.() || Date.now()).toLocaleDateString()}`;
+            timestampsDiv.appendChild(createdSpan);
+            
+            if (note.isConfirmed && note.confirmedAt) {
+                const confirmedSpan = document.createElement('span');
+                confirmedSpan.className = 'confirmation-date';
+                confirmedSpan.textContent = `✓ Confirmed: ${new Date(note.confirmedAt.toDate()).toLocaleDateString()}`;
+                timestampsDiv.appendChild(confirmedSpan);
+            }
+            if (note.isShared && note.sharedAt) {
+                const sharedSpan = document.createElement('span');
+                sharedSpan.className = 'share-date';
+                sharedSpan.textContent = `✓ Shared: ${new Date(note.sharedAt.toDate()).toLocaleDateString()}`;
+                timestampsDiv.appendChild(sharedSpan);
+            }
+
+            const noteActions = document.createElement('div');
+            noteActions.className = 'note-actions';
+
+            if (currentUser) {
+                if (!note.isConfirmed) {
+                    const confirmBtn = document.createElement('button');
+                    confirmBtn.className = 'status-btn confirm-btn';
+                    confirmBtn.textContent = 'Confirm Trust';
+                    confirmBtn.addEventListener('click', () => updateNoteStatus(note.id, 'confirm'));
+                    noteActions.appendChild(confirmBtn);
+                }
+                if (!note.isShared) {
+                    const shareBtn = document.createElement('button');
+                    shareBtn.className = 'status-btn share-btn';
+                    shareBtn.textContent = 'Mark as Shared';
+                    shareBtn.addEventListener('click', () => updateNoteStatus(note.id, 'share'));
+                    noteActions.appendChild(shareBtn);
+                }
+                const deleteBtn = document.createElement('button');
+                deleteBtn.className = 'delete-note';
+                deleteBtn.textContent = 'Delete';
+                deleteBtn.addEventListener('click', () => deleteNote(note.id));
+                noteActions.appendChild(deleteBtn);
+            }
+            
+            footerDiv.append(timestampsDiv, noteActions);
+            noteDiv.append(innerPaddingDiv, footerDiv);
+
+            let debounceTimer;
+            const handleContentUpdate = () => {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(() => {
+                    updateNoteContent(note.id, { title: titleInput.value, content: contentTextarea.value });
+                }, 500);
+            };
+            titleInput.addEventListener('input', handleContentUpdate);
+            contentTextarea.addEventListener('input', handleContentUpdate);
+
+            return noteDiv;
+        };
+
+        // --- Data Manipulation Functions ---
+        const createNewNote = () => {
+            const noteData = {
+                title: 'New Note', content: '', createdAt: new Date(), 
+                isConfirmed: false, confirmedAt: null, isShared: false, sharedAt: null,
+            };
+            if (currentUser && notesCollection) {
+                noteData.createdAt = firebase.firestore.Timestamp.fromDate(noteData.createdAt);
+                notesCollection.add(noteData)
+                    .then(() => {
+                        // After successful add to Firestore, immediately fetch and render.
+                        // This makes the new note appear right away.
+                        if (notesCollection) {
+                             notesCollection.orderBy('createdAt', 'desc').get().then(snapshot => {
+                                renderNotes(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+                            });
+                        }
+                    })
+                    .catch(err => console.error("Error creating note:", err));
+            } else {
+                const localNotes = getLocalNotes();
+                localNotes.unshift({ ...noteData, id: `local-${Date.now()}` });
+                saveLocalNotes(localNotes);
+                renderNotes(localNotes);
+            }
+        };
+        
+        const updateNoteContent = (noteId, dataToUpdate) => {
+            if (currentUser && notesCollection) {
+                notesCollection.doc(noteId).update(dataToUpdate).catch(err => console.error("Error updating note content:", err));
+            } else if (noteId && noteId.startsWith('local-')) {
+                let localNotes = getLocalNotes();
+                const noteIndex = localNotes.findIndex(n => n.id === noteId);
+                if (noteIndex > -1) {
+                    localNotes[noteIndex] = { ...localNotes[noteIndex], ...dataToUpdate };
+                    saveLocalNotes(localNotes);
+                }
+            }
+        };
+
+        const updateNoteStatus = (noteId, statusType) => {
+            let dataToUpdate = {};
+            if (statusType === 'confirm') {
+              dataToUpdate = { isConfirmed: true, confirmedAt: firebase.firestore.Timestamp.now() };
+            } else if (statusType === 'share') {
+              dataToUpdate = { isShared: true, sharedAt: firebase.firestore.Timestamp.now() };
+            }
+
+            if (currentUser && notesCollection) {
+                notesCollection.doc(noteId).update(dataToUpdate)
+                    .then(() => {
+                        // After successful status update in Firestore, immediately fetch and render.
+                        // This makes the status change (e.g., button to text) appear right away.
+                         if (notesCollection) {
+                             notesCollection.orderBy('createdAt', 'desc').get().then(snapshot => {
+                                renderNotes(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+                            });
+                        }
+                    })
+                    .catch(err => console.error("Error updating status:", err));
+            } else if (noteId && noteId.startsWith('local-')) {
+                let localNotes = getLocalNotes();
+                const noteIndex = localNotes.findIndex(n => n.id === noteId);
+                if (noteIndex > -1) {
+                    if (statusType === 'confirm') dataToUpdate = { isConfirmed: true, confirmedAt: new Date() };
+                    if (statusType === 'share') dataToUpdate = { isShared: true, sharedAt: new Date() };
+                    localNotes[noteIndex] = { ...localNotes[noteIndex], ...dataToUpdate };
+                    saveLocalNotes(localNotes);
+                    renderNotes(localNotes); // Re-render local notes to show status change
+                }
+            }
+        };
+
+        const deleteNote = (noteId) => {
+            if (confirm('Are you sure you want to delete this note?')) {
+                if (currentUser && notesCollection) {
+                    notesCollection.doc(noteId).delete().catch(err => console.error("Error deleting firestore note:", err));
+                    // onSnapshot will handle UI update for Firestore delete
+                } else if (noteId && noteId.startsWith('local-')) {
+                     let localNotes = getLocalNotes();
+                     saveLocalNotes(localNotes.filter(n => n.id !== noteId));
+                     renderNotes(getLocalNotes());
+                }
+            }
+        };
+
+        // --- Main Authentication Logic ---
+        auth.onAuthStateChanged(async (user) => {
+            if (user) { 
+                currentUser = user;
+                notesCollection = db.collection('users').doc(user.uid).collection('notes');
+                if (loginPromptBtn) loginPromptBtn.classList.add('hidden');
+                if (logoutBtn) logoutBtn.classList.remove('hidden');
+                if (authModal) authModal.classList.add('hidden');
+
+                const localNotes = getLocalNotes();
+                if (localNotes.length > 0) {
+                    const batch = db.batch();
+                    localNotes.forEach(note => {
+                        const docRef = notesCollection.doc();
+                        const { id, ...noteData } = note;
+                        if (noteData.createdAt && !(noteData.createdAt.toDate)) {
+                            noteData.createdAt = firebase.firestore.Timestamp.fromDate(new Date(noteData.createdAt));
+                        }
+                        if (noteData.confirmedAt && !(noteData.confirmedAt.toDate)) {
+                             noteData.confirmedAt = firebase.firestore.Timestamp.fromDate(new Date(noteData.confirmedAt));
+                        }
+                        if (noteData.sharedAt && !(noteData.sharedAt.toDate)) {
+                             noteData.sharedAt = firebase.firestore.Timestamp.fromDate(new Date(noteData.sharedAt));
+                        }
+                        batch.set(docRef, noteData);
+                    });
+                    await batch.commit();
+                    saveLocalNotes([]);
+                }
+                
+                if (firestoreUnsubscribe) firestoreUnsubscribe();
+                firestoreUnsubscribe = notesCollection.orderBy('createdAt', 'desc').onSnapshot(snapshot => {
+                    // **** KEYBOARD FIX: Only re-render from snapshot if it's NOT a local pending write ****
+                    // This prevents re-render during typing/editing.
+                    // Manual re-renders are triggered for new notes and status changes.
+                    if (snapshot.metadata.hasPendingWrites) {
+                        // If the local write was a status change or new note, it was handled by a manual get() and renderNotes().
+                        // If it was a title/content edit, the input field is already updated.
+                        // So, we can often return here to avoid flicker from the server echo.
+                        // However, for delete operations, we rely on this to update the UI.
+                        // Let's check docChanges for 'removed' type.
+                        let needsRenderForDelete = false;
+                        snapshot.docChanges().forEach(change => {
+                            if (change.type === 'removed') {
+                                needsRenderForDelete = true;
+                            }
+                        });
+                        if (!needsRenderForDelete) {
+                            return;
+                        }
+                    }
+                    const notes = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                    renderNotes(notes);
+                }, err => console.error("Firestore snapshot error:", err));
+
+            } else { 
+                currentUser = null;
+                notesCollection = null;
+                if (firestoreUnsubscribe) firestoreUnsubscribe();
+                if (loginPromptBtn) loginPromptBtn.classList.remove('hidden');
+                if (logoutBtn) logoutBtn.classList.add('hidden');
+                renderNotes(getLocalNotes());
+            }
+        });
+
+        // --- Event Listeners Setup ---
+        if (createNoteBtn) createNoteBtn.addEventListener('click', createNewNote);
+        if (logoutBtn) logoutBtn.addEventListener('click', () => auth.signOut());
+        if (loginPromptBtn) loginPromptBtn.addEventListener('click', () => { if(authModal) authModal.classList.remove('hidden'); showAuthForm(loginForm); });
+        if (closeModalBtn) closeModalBtn.addEventListener('click', () => { if(authModal) authModal.classList.add('hidden'); });
+        if (showSignupLink) showSignupLink.addEventListener('click', () => showAuthForm(signupForm));
+        if (showLoginLink) showLoginLink.addEventListener('click', () => showAuthForm(loginForm));
+        if (showForgotPasswordLink) showForgotPasswordLink.addEventListener('click', () => showAuthForm(forgotPasswordForm));
+        if (showLoginFromForgotLink) showLoginFromForgotLink.addEventListener('click', () => showAuthForm(loginForm));
+        
+        if (signupForm) signupForm.addEventListener('submit', (e) => { e.preventDefault(); auth.createUserWithEmailAndPassword(signupForm['signup-email'].value, signupForm['signup-password'].value).catch(err => showAuthMessage(signupForm, err.message)); });
+        if (loginForm) loginForm.addEventListener('submit', (e) => { e.preventDefault(); auth.signInWithEmailAndPassword(loginForm['login-email'].value, loginForm['login-password'].value).catch(err => showAuthMessage(loginForm, err.message)); });
+        if (forgotPasswordForm) forgotPasswordForm.addEventListener('submit', (e) => { e.preventDefault(); auth.sendPasswordResetEmail(forgotPasswordForm['reset-email'].value).then(() => showAuthMessage(forgotPasswordForm, 'Password reset email sent!', true)).catch(err => showAuthMessage(forgotPasswordForm, err.message)); });
+    });
+  //]]>
+  </script>
+</body>
+</html>
