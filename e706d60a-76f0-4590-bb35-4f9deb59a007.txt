@@ -477,8 +477,8 @@ justify-content: space-between;-webkit-justify-content: space-between;-moz-justi
 .featured-post-pro .widget .widget-content marquee a:after{content:"||";color:#000;margin:0 0 0 10px}
 .featured-post-pro .widget:nth-child(even) .widget-content marquee a:nth-child(odd){color:#ca0000}
 .featured-post-pro .widget:nth-child(odd) .widget-content marquee a:nth-child(even){color:#1cab00}
-.dialog-post{display:flex;display:-webkit-flex;display:-moz-flex;display:-
-}}]</b:skin>
+.dialog-post{display:flex;}
+]</b:skin>
 
 </head>
 <body expr:class='data:blog.languageDirection' expr:dir='data:blog.languageDirection' expr:lang='data:blog.localeUnderscoreDelimited'>
