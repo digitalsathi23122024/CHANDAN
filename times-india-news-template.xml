@@ -1,0 +1,1446 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion='1.0.0' expr:class='data:blog.languageDirection' expr:dir='data:blog.languageDirection' expr:lang='data:blog.localeUnderscoreDelimited' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <!-- SEO Meta Tags -->
+  <meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
+  <title><data:view.title.escaped/></title>
+  <meta expr:content='"text/html; charset=" + data:blog.encoding' http-equiv='Content-Type'/>
+  <meta content='blogger' name='generator'/>
+  <link expr:href='data:blog.blogspotFaviconUrl' rel='icon' type='image/x-icon'/>
+  <link expr:href='data:blog.url' hreflang='x-default' rel='alternate'/>
+  <meta expr:content='data:skin.vars.keycolor' name='theme-color'/>
+  <meta expr:content='data:skin.vars.keycolor' name='msapplication-navbutton-color'/>
+  
+  <b:if cond='data:blog.adultContent'>
+    <meta content='adult' name='rating'/>
+  </b:if>
+  
+  <link expr:href='data:view.url.canonical' rel='canonical'/>
+  <data:blog.feedLinks/><data:blog.meTag/>
+  <link expr:href='data:blog.url' expr:hreflang='data:blog.localeUnderscoreDelimited' rel='alternate'/>
+  <meta expr:content='data:view.description.escaped' name='description'/>
+  
+  <!-- Open Graph Tags -->
+  <b:if cond='data:view.isHomepage'>
+    <meta content='website' property='og:type'/>
+  </b:if>
+  <b:if cond='data:view.isSingleItem'>
+    <meta content='article' property='og:type'/>
+  </b:if>
+  <meta expr:content='data:view.title.escaped' property='og:title'/>
+  <meta expr:content='data:blog.url.canonical' property='og:url'/>
+  <meta expr:content='data:view.description.escaped' property='og:description'/>
+  <meta expr:content='data:blog.title.escaped' property='og:site_name'/>
+  
+  <!-- Twitter Card Tags -->
+  <meta content='summary_large_image' name='twitter:card'/>
+  <meta expr:content='data:view.title.escaped' name='twitter:title'/>
+  <meta expr:content='data:view.description.escaped' name='twitter:description'/>
+  
+  <!-- DNS Prefetch -->
+  <link href='//1.bp.blogspot.com' rel='dns-prefetch'/>
+  <link href='//2.bp.blogspot.com' rel='dns-prefetch'/>
+  <link href='//3.bp.blogspot.com' rel='dns-prefetch'/>
+  <link href='//4.bp.blogspot.com' rel='dns-prefetch'/>
+  <link href='//fonts.googleapis.com' rel='dns-prefetch'/>
+  <link href='//cdnjs.cloudflare.com' rel='dns-prefetch'/>
+  
+  <!-- Google Fonts -->
+  <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Playfair+Display:wght@400;700&amp;display=swap' rel='stylesheet'/>
+  
+  <!-- Font Awesome -->
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' rel='stylesheet'/>
+  
+  <!-- Template Styles -->
+  <b:skin version='1.3.3'><![CDATA[
+/* ===========================
+   Times India News Template
+   Version: 1.0.0
+=========================== */
+
+/* CSS Variables */
+:root {
+  --primary-color: #c41e3a;
+  --secondary-color: #1a1a1a;
+  --accent-color: #ffd700;
+  --text-color: #333;
+  --light-bg: #f8f9fa;
+  --white: #ffffff;
+  --border-color: #e9ecef;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header Styles */
+.header {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.top-bar {
+  background: var(--secondary-color);
+  color: var(--white);
+  padding: 8px 0;
+  font-size: 12px;
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-time {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-links a {
+  color: var(--white);
+  margin: 0 5px;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  color: var(--accent-color);
+}
+
+.main-header {
+  padding: 15px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.logo:hover {
+  color: var(--primary-color);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  padding: 8px 40px 8px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 25px;
+  width: 250px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.search-box input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(196, 30, 58, 0.1);
+}
+
+.search-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+/* Navigation */
+.navigation {
+  background: var(--primary-color);
+  padding: 0;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  display: block;
+  padding: 15px 20px;
+  color: var(--white);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.nav-menu a:hover {
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
+}
+
+.nav-menu .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  min-width: 200px;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: var(--transition);
+}
+
+.nav-menu li:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown a {
+  color: var(--text-color);
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dropdown a:hover {
+  background: var(--light-bg);
+  color: var(--primary-color);
+}
+
+/* Breaking News Ticker */
+.breaking-news {
+  background: var(--accent-color);
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+.breaking-content {
+  display: flex;
+  align-items: center;
+}
+
+.breaking-label {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 5px 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-right: 15px;
+  border-radius: 3px;
+}
+
+.breaking-text {
+  color: var(--secondary-color);
+  font-weight: 500;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Main Content Layout */
+.main-content {
+  padding: 30px 0;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 30px;
+}
+
+/* Featured Article */
+.featured-section {
+  margin-bottom: 40px;
+}
+
+.featured-article {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.featured-article img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.featured-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  padding: 30px;
+  color: var(--white);
+}
+
+.featured-category {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 5px 12px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.featured-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.featured-meta {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* News Sections */
+.news-section {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow);
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--primary-color);
+  position: relative;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.news-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: var(--transition);
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.news-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-card-content {
+  padding: 15px;
+}
+
+.news-category {
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.news-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.news-excerpt {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.news-meta {
+  font-size: 12px;
+  color: #888;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-widget {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.widget-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.trending-list {
+  list-style: none;
+}
+
+.trending-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trending-item:last-child {
+  border-bottom: none;
+}
+
+.trending-number {
+  background: var(--primary-color);
+  color: var(--white);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.trending-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* Advertisement Placeholder */
+.ad-placeholder {
+  background: var(--light-bg);
+  border: 2px dashed var(--border-color);
+  padding: 40px 20px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+  background: var(--secondary-color);
+  color: var(--white);
+  padding: 40px 0 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-section h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 15px;
+  color: var(--accent-color);
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  padding: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  transition: var(--transition);
+}
+
+.footer-section ul li a:hover {
+  color: var(--accent-color);
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  text-align: center;
+  color: #ccc;
+}
+
+/* Mobile Menu */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .logo {
+    font-size: 2rem;
+  }
+  
+  .search-box input {
+    width: 200px;
+  }
+  
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--primary-color);
+    box-shadow: var(--shadow);
+  }
+  
+  .nav-menu.active {
+    display: flex;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .featured-title {
+    font-size: 1.5rem;
+  }
+  
+  .top-bar-content {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+  
+  .breaking-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+  }
+  
+  .search-box input {
+    width: 150px;
+  }
+  
+  .featured-overlay {
+    padding: 20px;
+  }
+  
+  .featured-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 10px; }
+.mb-2 { margin-bottom: 20px; }
+.mb-3 { margin-bottom: 30px; }
+.d-none { display: none; }
+.d-block { display: block; }
+.d-flex { display: flex; }
+
+/* Loading Animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(196, 30, 58, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+  ]]></b:skin>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class='header'>
+    <!-- Top Bar -->
+    <div class='top-bar'>
+      <div class='container'>
+        <div class='top-bar-content'>
+          <div class='date-time'>
+            <span id='current-date'>Loading...</span>
+            <span>|</span>
+            <span id='current-time'>Loading...</span>
+          </div>
+          <div class='social-links'>
+            <a href='#' title='Facebook'><i class='fab fa-facebook-f'></i></a>
+            <a href='#' title='Twitter'><i class='fab fa-twitter'></i></a>
+            <a href='#' title='Instagram'><i class='fab fa-instagram'></i></a>
+            <a href='#' title='YouTube'><i class='fab fa-youtube'></i></a>
+            <a href='#' title='LinkedIn'><i class='fab fa-linkedin-in'></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Main Header -->
+    <div class='main-header'>
+      <div class='container'>
+        <div class='header-content'>
+          <div class='logo'>
+            <a expr:href='data:blog.homepageUrl'>
+              <data:blog.title/>
+            </a>
+          </div>
+          <div class='header-actions'>
+            <div class='search-box'>
+              <input type='text' placeholder='Search news...' id='search-input'/>
+              <button class='search-btn' onclick='performSearch()'>
+                <i class='fas fa-search'></i>
+              </button>
+            </div>
+            <button class='mobile-menu-toggle' onclick='toggleMobileMenu()'>
+              <i class='fas fa-bars'></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class='navigation'>
+      <div class='container'>
+        <ul class='nav-menu' id='nav-menu'>
+          <li><a expr:href='data:blog.homepageUrl'>Home</a></li>
+          <li>
+            <a href='#'>Politics</a>
+            <ul class='dropdown'>
+              <li><a expr:href='data:blog.homepageUrl + "/search/label/Politics"'>National</a></li>
+              <li><a expr:href='data:blog.homepageUrl + "/search/label/International"'>International</a></li>
+            </ul>
+          </li>
+          <li><a expr:href='data:blog.homepageUrl + "/search/label/Sports"'>Sports</a></li>
+          <li><a expr:href='data:blog.homepageUrl + "/search/label/Business"'>Business</a></li>
+          <li><a expr:href='data:blog.homepageUrl + "/search/label/Entertainment"'>Entertainment</a></li>
+          <li><a expr:href='data:blog.homepageUrl + "/search/label/Technology"'>Technology</a></li>
+          <li><a expr:href='data:blog.homepageUrl + "/search/label/Health"'>Health</a></li>
+          <li><a expr:href='data:blog.homepageUrl + "/search/label/Lifestyle"'>Lifestyle</a></li>
+          <li><a expr:href='data:blog.homepageUrl + "/search/label/World"'>World</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breaking News Ticker -->
+  <div class='breaking-news'>
+    <div class='container'>
+      <div class='breaking-content'>
+        <div class='breaking-label'>Breaking News</div>
+        <div class='breaking-text'>
+          Stay updated with the latest breaking news and developments from around the world • 
+          Follow us for real-time updates on politics, sports, business, entertainment and more •
+          Your trusted source for authentic news coverage • 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class='main-content'>
+    <div class='container'>
+      <div class='content-grid'>
+        <!-- Primary Content Area -->
+        <div class='primary-content'>
+          
+          <!-- Featured Article Section -->
+          <b:if cond='data:view.isHomepage'>
+            <section class='featured-section'>
+              <b:section class='featured-posts' id='featured-posts' name='Featured Posts' showaddelement='yes'>
+                <b:widget id='FeaturedPost1' locked='false' title='Featured Article' type='FeaturedPost' version='2'>
+                  <b:widget-settings>
+                    <b:widget-setting name='showSummary'>true</b:widget-setting>
+                    <b:widget-setting name='showSnippet'>true</b:widget-setting>
+                    <b:widget-setting name='showDate'>true</b:widget-setting>
+                  </b:widget-settings>
+                  <b:includable id='main'>
+                    <div class='featured-article'>
+                      <b:loop values='data:posts' var='post'>
+                        <a expr:href='data:post.url'>
+                          <b:if cond='data:post.featuredImage'>
+                            <img expr:alt='data:post.title' expr:src='resizeImage(data:post.featuredImage, 800)' expr:title='data:post.title'/>
+                          </b:if>
+                          <div class='featured-overlay'>
+                            <b:if cond='data:post.labels'>
+                              <span class='featured-category'><data:post.labels.first.name/></span>
+                            </b:if>
+                            <h2 class='featured-title'><data:post.title/></h2>
+                            <div class='featured-meta'>
+                              <span><i class='far fa-clock'></i> <data:post.date/></span>
+                              <span> • By <data:post.author.name/></span>
+                            </div>
+                          </div>
+                        </a>
+                      </b:loop>
+                    </div>
+                  </b:includable>
+                </b:widget>
+              </b:section>
+            </section>
+          </b:if>
+
+          <!-- Main Blog Content -->
+          <b:section class='main-blog' id='main-blog' name='Main Blog Content' showaddelement='yes'>
+            <b:widget id='Blog1' locked='false' title='Blog Posts' type='Blog' version='2'>
+              <b:widget-settings>
+                <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+                <b:widget-setting name='style.textcolor'>#333333</b:widget-setting>
+                <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+                <b:widget-setting name='showComments'>true</b:widget-setting>
+                <b:widget-setting name='showLocation'>false</b:widget-setting>
+                <b:widget-setting name='showTimeStamp'>true</b:widget-setting>
+                <b:widget-setting name='postsPerPage'>5</b:widget-setting>
+                <b:widget-setting name='showAuthor'>true</b:widget-setting>
+                <b:widget-setting name='showLabels'>true</b:widget-setting>
+                <b:widget-setting name='showTitle'>true</b:widget-setting>
+                <b:widget-setting name='showSnippet'>true</b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main' var='top'>
+                <div class='blog-posts'>
+                  <b:if cond='data:posts'>
+                    <b:if cond='data:view.isHomepage'>
+                      <!-- Homepage News Grid -->
+                      <div class='news-section'>
+                        <h2 class='section-title'>Latest News</h2>
+                        <div class='news-grid'>
+                          <b:loop values='data:posts' var='post'>
+                            <article class='news-card'>
+                              <b:if cond='data:post.featuredImage'>
+                                <a expr:href='data:post.url'>
+                                  <img expr:alt='data:post.title' expr:src='resizeImage(data:post.featuredImage, 400)' expr:title='data:post.title'/>
+                                </a>
+                              </b:if>
+                              <div class='news-card-content'>
+                                <b:if cond='data:post.labels'>
+                                  <span class='news-category'><data:post.labels.first.name/></span>
+                                </b:if>
+                                <h3 class='news-title'>
+                                  <a expr:href='data:post.url'><data:post.title/></a>
+                                </h3>
+                                <p class='news-excerpt'><data:post.snippet/></p>
+                                <div class='news-meta'>
+                                  <span><i class='far fa-clock'></i> <data:post.date/></span>
+                                  <span><i class='far fa-user'></i> <data:post.author.name/></span>
+                                </div>
+                              </div>
+                            </article>
+                          </b:loop>
+                        </div>
+                      </div>
+                    <b:else/>
+                      <!-- Single Post or Archive View -->
+                      <b:loop values='data:posts' var='post'>
+                        <article class='post' expr:id='"post-" + data:post.id'>
+                          <b:include data='post' name='postContent'/>
+                        </article>
+                      </b:loop>
+                    </b:if>
+                  <b:else/>
+                    <div class='no-posts'>
+                      <h3>No posts found</h3>
+                      <p>There are no posts to display at the moment.</p>
+                    </div>
+                  </b:if>
+                  
+                  <!-- Pagination -->
+                  <b:include name='pagination'/>
+                </div>
+              </b:includable>
+              
+              <b:includable id='postContent' var='post'>
+                <div class='post-header'>
+                  <b:if cond='data:post.labels'>
+                    <span class='post-category'><data:post.labels.first.name/></span>
+                  </b:if>
+                  <h1 class='post-title'><data:post.title/></h1>
+                  <div class='post-meta'>
+                    <span><i class='far fa-clock'></i> <data:post.date/></span>
+                    <span> • <i class='far fa-user'></i> <data:post.author.name/></span>
+                    <b:if cond='data:post.labels'>
+                      <span> • <i class='fas fa-tag'></i> 
+                        <b:loop values='data:post.labels' var='label'>
+                          <a expr:href='data:blog.homepageUrl + "/search/label/" + data:label.name'><data:label.name/></a><b:if cond='not data:label.isLast'>, </b:if>
+                        </b:loop>
+                      </span>
+                    </b:if>
+                  </div>
+                </div>
+                
+                <b:if cond='data:post.featuredImage and data:view.isSingleItem'>
+                  <div class='post-image'>
+                    <img expr:alt='data:post.title' expr:src='data:post.featuredImage' expr:title='data:post.title'/>
+                  </div>
+                </b:if>
+                
+                <div class='post-content'>
+                  <data:post.body/>
+                </div>
+                
+                <b:if cond='data:view.isSingleItem'>
+                  <div class='post-footer'>
+                    <div class='post-share'>
+                      <span>Share this article:</span>
+                      <a expr:href='"https://www.facebook.com/sharer/sharer.php?u=" + data:post.url' target='_blank'><i class='fab fa-facebook-f'></i></a>
+                      <a expr:href='"https://twitter.com/intent/tweet?url=" + data:post.url + "&amp;text=" + data:post.title' target='_blank'><i class='fab fa-twitter'></i></a>
+                      <a expr:href='"https://api.whatsapp.com/send?text=" + data:post.title + " " + data:post.url' target='_blank'><i class='fab fa-whatsapp'></i></a>
+                    </div>
+                  </div>
+                  
+                  <!-- Comments Section -->
+                  <b:include data='post' name='comments'/>
+                </b:if>
+              </b:includable>
+              
+              <b:includable id='pagination'>
+                <div class='pagination'>
+                  <b:if cond='data:olderPageUrl'>
+                    <a class='older-link' expr:href='data:olderPageUrl'>← Older Posts</a>
+                  </b:if>
+                  <b:if cond='data:newerPageUrl'>
+                    <a class='newer-link' expr:href='data:newerPageUrl'>Newer Posts →</a>
+                  </b:if>
+                </div>
+              </b:includable>
+              
+              <b:includable id='comments' var='post'>
+                <div class='comments-section'>
+                  <h3>Comments (<data:post.numberOfComments/>)</h3>
+                  <div id='comments'>
+                    <data:post.commentPagingHtml/>
+                    <data:post.commentHtml/>
+                    <data:post.commentFormHtml/>
+                  </div>
+                </div>
+              </b:includable>
+            </b:widget>
+          </b:section>
+
+          <!-- Advertisement Placeholder -->
+          <div class='ad-placeholder'>
+            <p>Advertisement Space<br/>
+            <small>728 x 90 Banner</small></p>
+          </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class='sidebar'>
+          
+          <!-- Trending News Widget -->
+          <div class='sidebar-widget'>
+            <h3 class='widget-title'>Trending News</h3>
+            <ul class='trending-list'>
+              <li class='trending-item'>
+                <span class='trending-number'>1</span>
+                <span class='trending-title'>Breaking: Major development in ongoing political situation</span>
+              </li>
+              <li class='trending-item'>
+                <span class='trending-number'>2</span>
+                <span class='trending-title'>Sports update: Championship finals approaching</span>
+              </li>
+              <li class='trending-item'>
+                <span class='trending-number'>3</span>
+                <span class='trending-title'>Technology: Latest smartphone innovations revealed</span>
+              </li>
+              <li class='trending-item'>
+                <span class='trending-number'>4</span>
+                <span class='trending-title'>Business: Market trends show positive growth</span>
+              </li>
+              <li class='trending-item'>
+                <span class='trending-number'>5</span>
+                <span class='trending-title'>Health: New research findings on wellness</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Popular Posts Widget -->
+          <b:section class='sidebar-popular' id='sidebar-popular' name='Popular Posts' showaddelement='yes'>
+            <b:widget id='PopularPosts1' locked='false' title='Popular Posts' type='PopularPosts' version='2'>
+              <b:widget-settings>
+                <b:widget-setting name='numItemsToShow'>5</b:widget-setting>
+                <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+                <b:widget-setting name='showSnippets'>true</b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main'>
+                <div class='sidebar-widget'>
+                  <h3 class='widget-title'><data:title/></h3>
+                  <ul class='popular-posts-list'>
+                    <b:loop values='data:posts' var='post'>
+                      <li class='popular-post-item'>
+                        <b:if cond='data:post.thumbnail'>
+                          <img expr:alt='data:post.title' expr:src='data:post.thumbnail' class='popular-post-thumb'/>
+                        </b:if>
+                        <div class='popular-post-content'>
+                          <a expr:href='data:post.href'><data:post.title/></a>
+                          <div class='popular-post-snippet'><data:post.snippet/></div>
+                        </div>
+                      </li>
+                    </b:loop>
+                  </ul>
+                </div>
+              </b:includable>
+            </b:widget>
+          </b:section>
+
+          <!-- Advertisement Placeholder -->
+          <div class='ad-placeholder'>
+            <p>Advertisement Space<br/>
+            <small>300 x 250 Banner</small></p>
+          </div>
+
+          <!-- Labels/Categories Widget -->
+          <b:section class='sidebar-labels' id='sidebar-labels' name='Categories' showaddelement='yes'>
+            <b:widget id='Label1' locked='false' title='Categories' type='Label' version='2'>
+              <b:widget-settings>
+                <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
+                <b:widget-setting name='display'>LIST</b:widget-setting>
+                <b:widget-setting name='selectedLabelsList'/>
+                <b:widget-setting name='showType'>ALL</b:widget-setting>
+                <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main'>
+                <div class='sidebar-widget'>
+                  <h3 class='widget-title'><data:title/></h3>
+                  <ul class='label-list'>
+                    <b:loop values='data:labels' var='label'>
+                      <li>
+                        <a expr:href='data:label.url'>
+                          <data:label.name/>
+                          <span class='label-count'>(<data:label.count/>)</span>
+                        </a>
+                      </li>
+                    </b:loop>
+                  </ul>
+                </div>
+              </b:includable>
+            </b:widget>
+          </b:section>
+
+          <!-- Archive Widget -->
+          <b:section class='sidebar-archive' id='sidebar-archive' name='Blog Archive' showaddelement='yes'>
+            <b:widget id='BlogArchive1' locked='false' title='Archive' type='BlogArchive' version='2'>
+              <b:widget-settings>
+                <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
+                <b:widget-setting name='yearlyItems'>true</b:widget-setting>
+                <b:widget-setting name='showWeekEnd'>true</b:widget-setting>
+                <b:widget-setting name='monthlyItems'>true</b:widget-setting>
+                <b:widget-setting name='weeklyItems'>false</b:widget-setting>
+                <b:widget-setting name='dailyItems'>false</b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main'>
+                <div class='sidebar-widget'>
+                  <h3 class='widget-title'><data:title/></h3>
+                  <div class='archive-list'>
+                    <data:widget.html/>
+                  </div>
+                </div>
+              </b:includable>
+            </b:widget>
+          </b:section>
+
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class='footer'>
+    <div class='container'>
+      <div class='footer-content'>
+        <div class='footer-section'>
+          <h3>About Us</h3>
+          <p>Your trusted source for the latest news and updates from around the world. We bring you authentic, timely, and comprehensive coverage of events that matter.</p>
+        </div>
+        <div class='footer-section'>
+          <h3>Categories</h3>
+          <ul>
+            <li><a href='#'>Politics</a></li>
+            <li><a href='#'>Sports</a></li>
+            <li><a href='#'>Business</a></li>
+            <li><a href='#'>Entertainment</a></li>
+            <li><a href='#'>Technology</a></li>
+          </ul>
+        </div>
+        <div class='footer-section'>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href='#'>Contact Us</a></li>
+            <li><a href='#'>Privacy Policy</a></li>
+            <li><a href='#'>Terms of Service</a></li>
+            <li><a href='#'>Advertise</a></li>
+            <li><a href='#'>Careers</a></li>
+          </ul>
+        </div>
+        <div class='footer-section'>
+          <h3>Follow Us</h3>
+          <div class='footer-social'>
+            <a href='#'><i class='fab fa-facebook-f'></i> Facebook</a>
+            <a href='#'><i class='fab fa-twitter'></i> Twitter</a>
+            <a href='#'><i class='fab fa-instagram'></i> Instagram</a>
+            <a href='#'><i class='fab fa-youtube'></i> YouTube</a>
+            <a href='#'><i class='fab fa-linkedin-in'></i> LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class='footer-bottom'>
+        <p>&copy; 2024 <data:blog.title/>. All rights reserved. | Designed with ❤️ for news lovers</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Update Date and Time
+    function updateDateTime() {
+      const now = new Date();
+      const dateOptions = { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+      };
+      const timeOptions = { 
+        hour: '2-digit', 
+        minute: '2-digit',
+        hour12: true
+      };
+      
+      document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', dateOptions);
+      document.getElementById('current-time').textContent = now.toLocaleTimeString('en-US', timeOptions);
+    }
+
+    // Update time every minute
+    updateDateTime();
+    setInterval(updateDateTime, 60000);
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('active');
+    }
+
+    // Search Functionality
+    function performSearch() {
+      const searchInput = document.getElementById('search-input');
+      const query = searchInput.value.trim();
+      if (query) {
+        window.location.href = '/search?q=' + encodeURIComponent(query);
+      }
+    }
+
+    // Enter key search
+    document.getElementById('search-input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        performSearch();
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+      const navMenu = document.getElementById('nav-menu');
+      const menuToggle = document.querySelector('.mobile-menu-toggle');
+      
+      if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        navMenu.classList.remove('active');
+      }
+    });
+
+    // Lazy loading for images
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+      });
+    }
+
+    // Back to top button
+    const backToTopButton = document.createElement('button');
+    backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    backToTopButton.className = 'back-to-top';
+    backToTopButton.style.cssText = `
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border: none;
+      border-radius: 50%;
+      background: var(--primary-color);
+      color: white;
+      cursor: pointer;
+      display: none;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    `;
+    
+    document.body.appendChild(backToTopButton);
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+  <!-- Additional CSS for specific elements -->
+  <style>
+    .post-header {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .post-category {
+      display: inline-block;
+      background: var(--primary-color);
+      color: var(--white);
+      padding: 5px 12px;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .post-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--secondary-color);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .post-meta {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .post-meta a {
+      color: var(--primary-color);
+    }
+
+    .post-image {
+      margin: 20px 0;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .post-content {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .post-content p {
+      margin-bottom: 15px;
+    }
+
+    .post-content h2,
+    .post-content h3,
+    .post-content h4 {
+      margin: 25px 0 15px;
+      color: var(--secondary-color);
+    }
+
+    .post-share {
+      padding: 20px 0;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .post-share a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      color: var(--white);
+      font-size: 16px;
+    }
+
+    .post-share a[href*="facebook"] { background: #3b5998; }
+    .post-share a[href*="twitter"] { background: #1da1f2; }
+    .post-share a[href*="whatsapp"] { background: #25d366; }
+
+    .pagination {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 0;
+      padding: 20px 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .pagination a {
+      padding: 10px 20px;
+      background: var(--primary-color);
+      color: var(--white);
+      border-radius: 5px;
+      font-weight: 500;
+    }
+
+    .pagination a:hover {
+      background: var(--secondary-color);
+      color: var(--white);
+    }
+
+    .comments-section {
+      margin-top: 40px;
+      padding: 30px;
+      background: var(--light-bg);
+      border-radius: 10px;
+    }
+
+    .popular-posts-list {
+      list-style: none;
+    }
+
+    .popular-post-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .popular-post-item:last-child {
+      border-bottom: none;
+    }
+
+    .popular-post-thumb {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 5px;
+      flex-shrink: 0;
+    }
+
+    .popular-post-content a {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.3;
+    }
+
+    .popular-post-snippet {
+      font-size: 12px;
+      color: #666;
+      margin-top: 5px;
+    }
+
+    .label-list {
+      list-style: none;
+    }
+
+    .label-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .label-list li:last-child {
+      border-bottom: none;
+    }
+
+    .label-count {
+      color: #666;
+      font-size: 12px;
+    }
+
+    .footer-social a {
+      display: block;
+      padding: 5px 0;
+      color: #ccc;
+    }
+
+    .footer-social a:hover {
+      color: var(--accent-color);
+    }
+
+    @media (max-width: 768px) {
+      .post-title {
+        font-size: 1.8rem;
+      }
+      
+      .post-share {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</body>
+</html>
