@@ -1,0 +1,519 @@
+<!-- wp:html -->
+<style>
+/* ── GLOBAL RESET HELPERS ───────────────────────────────── */
+.gpr-wrap * { box-sizing: border-box; }
+.gpr-wrap a { text-decoration: none !important; }
+
+/* ── HERO BANNER ────────────────────────────────────────── */
+.gpr-hero {
+  background: linear-gradient(120deg,#0ea87a 0%,#13c9a0 45%,#17c9c9 75%,#1bafd6 100%);
+  padding: 55px 20px 48px;
+  text-align: center;
+}
+.gpr-hero h1 {
+  color: #fff !important;
+  font-size: clamp(22px,4vw,36px);
+  font-weight: 800;
+  margin: 0 0 22px;
+  text-shadow: 0 2px 10px rgba(0,0,0,.18);
+  letter-spacing: -.3px;
+}
+.gpr-searchbox {
+  display: flex;
+  max-width: 580px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 6px 28px rgba(0,0,0,.18);
+}
+.gpr-searchbox input {
+  flex: 1; border: none; outline: none;
+  padding: 15px 22px; font-size: 15px; color: #333; background: transparent;
+}
+.gpr-searchbox button {
+  background: #111; border: none; padding: 0 22px;
+  cursor: pointer; border-radius: 0 50px 50px 0; min-width: 52px;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* ── QUICK LINKS (job cards) ────────────────────────────── */
+.gpr-quicklinks-outer {
+  max-width: 1160px; margin: -14px auto 0;
+  padding: 0 16px;
+}
+.gpr-quicklinks-box {
+  background: #fff; border-radius: 14px;
+  box-shadow: 0 6px 32px rgba(0,0,0,.11);
+  padding: 18px; margin-bottom: 4px;
+}
+.gpr-ql-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+}
+@media(max-width:768px){ .gpr-ql-grid{ grid-template-columns: repeat(2,1fr); } }
+@media(max-width:420px){ .gpr-ql-grid{ grid-template-columns: 1fr 1fr; } }
+.gpr-ql-card {
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 18px 10px;
+  border-radius: 8px; color: #fff !important;
+  font-size: 13.5px; font-weight: 700; line-height: 1.45;
+  transition: transform .18s, box-shadow .18s;
+}
+.gpr-ql-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,.18); }
+
+/* ── MARQUEE ────────────────────────────────────────────── */
+.gpr-marquee-wrap {
+  max-width: 1160px; margin: 18px auto 0; padding: 0 16px;
+}
+.gpr-marquee-box {
+  display: flex; align-items: center; gap: 10px;
+  background: #fff8f2; border: 1.5px solid #ffd5a8;
+  border-radius: 8px; padding: 9px 14px; overflow: hidden;
+}
+.gpr-marquee-label {
+  background: #f97316; color: #fff;
+  font-size: 11.5px; font-weight: 800;
+  padding: 4px 12px; border-radius: 4px; white-space: nowrap; flex-shrink: 0;
+}
+.gpr-marquee-box marquee a {
+  color: #0a7c59; font-weight: 600; font-size: 13.5px; margin: 0 6px;
+}
+.gpr-marquee-box marquee a:hover { color: #f97316; }
+
+/* ── SOCIAL BUTTONS ─────────────────────────────────────── */
+.gpr-social-row {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  max-width: 1160px; margin: 20px auto 0; padding: 0 16px;
+}
+.gpr-social-btn {
+  flex: 1; min-width: 170px;
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  padding: 14px 18px; border-radius: 8px;
+  font-size: 15px; font-weight: 700; color: #fff !important;
+  transition: transform .18s, opacity .18s;
+}
+.gpr-social-btn:hover { transform: translateY(-2px); opacity: .92; }
+.gpr-social-wa  { background: #25d366; }
+.gpr-social-yt  { background: #ff0000; }
+.gpr-social-tg  { background: #0088cc; }
+
+/* ── CATEGORY ICONS ─────────────────────────────────────── */
+.gpr-icons-wrap {
+  max-width: 1160px; margin: 20px auto 0; padding: 0 16px;
+}
+.gpr-icons-box {
+  background: #fff; border-radius: 10px;
+  box-shadow: 0 2px 14px rgba(0,0,0,.07);
+  padding: 18px 10px;
+  display: flex; flex-wrap: wrap;
+  justify-content: space-around; gap: 12px;
+}
+.gpr-icon-item {
+  display: flex; flex-direction: column; align-items: center; gap: 7px;
+  text-decoration: none !important; color: #222 !important;
+  font-size: 12.5px; font-weight: 700; min-width: 70px; text-align: center;
+  transition: color .18s;
+}
+.gpr-icon-item:hover { color: #0a9e72 !important; }
+.gpr-icon-item img { width: 50px; height: 50px; object-fit: contain; }
+
+/* ── CATEGORY POST SECTIONS ─────────────────────────────── */
+.gpr-sections-outer {
+  max-width: 1160px; margin: 24px auto 0; padding: 0 16px;
+}
+.gpr-sections-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+@media(max-width:900px){ .gpr-sections-grid{ grid-template-columns: repeat(2,1fr); } }
+@media(max-width:580px){ .gpr-sections-grid{ grid-template-columns: 1fr; } }
+
+.gpr-section-card {
+  border: 1.5px solid #d6ede5;
+  border-radius: 10px; overflow: hidden; background: #fff;
+  box-shadow: 0 3px 14px rgba(10,158,114,.08);
+  display: flex; flex-direction: column;
+}
+.gpr-card-header {
+  background: #0a9e72; color: #fff;
+  text-align: center; padding: 13px 10px;
+  font-size: 19px; font-weight: 800; letter-spacing: .2px;
+}
+.gpr-card-list { list-style: none; margin: 0; padding: 6px 0; flex: 1; }
+.gpr-card-list li {
+  padding: 10px 14px 8px;
+  border-bottom: 1px solid #f0f5f2;
+}
+.gpr-card-list li:last-child { border-bottom: none; }
+.gpr-card-list li a {
+  color: #1a1a1a !important; display: block;
+  font-size: 14px; font-weight: 600; line-height: 1.4; margin-bottom: 4px;
+}
+.gpr-card-list li a:hover { color: #0a9e72 !important; }
+.gpr-meta {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  font-size: 11.5px; color: #888; font-weight: 500;
+}
+.gpr-meta span { display: flex; align-items: center; gap: 4px; }
+.gpr-status-new  { color: #0a9e72 !important; font-weight: 700 !important; }
+.gpr-status-upd  { color: #f97316 !important; font-weight: 700 !important; }
+.gpr-status-ext  { color: #e53935 !important; font-weight: 700 !important; }
+.gpr-card-footer {
+  padding: 12px 14px; border-top: 1.5px solid #e8f5ef;
+  display: flex; justify-content: center;
+}
+.gpr-view-more {
+  display: inline-flex; align-items: center; gap: 5px;
+  background: #0a9e72; color: #fff !important;
+  padding: 9px 32px; border-radius: 6px;
+  font-size: 14px; font-weight: 700;
+  transition: background .18s;
+}
+.gpr-view-more:hover { background: #077a57 !important; color: #fff !important; }
+
+/* ── ABOUT SECTION ──────────────────────────────────────── */
+.gpr-about-outer {
+  max-width: 1160px; margin: 28px auto 0; padding: 0 16px 40px;
+}
+.gpr-about-box {
+  border: 2px solid #0a9e72; border-radius: 10px; overflow: hidden;
+}
+.gpr-about-header {
+  background: #0a9e72; color: #fff; text-align: center;
+  padding: 10px 14px; font-size: 20px; font-weight: 800;
+}
+.gpr-about-body { padding: 18px 20px; font-size: 14.5px; color: #444; line-height: 1.75; }
+</style>
+
+<div class="gpr-wrap">
+
+<!-- ════ 1. HERO BANNER ════ -->
+<div class="gpr-hero">
+  <h1>No #1 Platform For Job Updates</h1>
+  <div class="gpr-searchbox">
+    <input type="text" placeholder="Search jobs, results, admit cards..." />
+    <button aria-label="Search">
+      <svg width="20" height="20" fill="none" stroke="white" stroke-width="2.5"
+           stroke-linecap="round" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="6"/><line x1="16.5" y1="16.5" x2="22" y2="22"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- ════ 2. QUICK LINKS ════ -->
+<div class="gpr-quicklinks-outer">
+  <div class="gpr-quicklinks-box">
+    <div class="gpr-ql-grid">
+      <a href="#" class="gpr-ql-card" style="background:#5d8a0f;">UPSC EPFO Recruitment 2023 Apply Online</a>
+      <a href="#" class="gpr-ql-card" style="background:#1565c0;">IDBI Bank Assistant Manager Recruitment 2023</a>
+      <a href="#" class="gpr-ql-card" style="background:#e65c00;">Haryana HPSC Civil Services Recruitment 2023</a>
+      <a href="#" class="gpr-ql-card" style="background:#b71c1c;">Assam Rifles Technical Recruitment 2023</a>
+      <a href="#" class="gpr-ql-card" style="background:#e53935;">Bihar CET B.Ed Admission Application Form</a>
+      <a href="#" class="gpr-ql-card" style="background:#0a9e72;">UP B.Ed JEE Admission Application Form</a>
+      <a href="#" class="gpr-ql-card" style="background:#0288d1;">Bihar DElEd Admission Online Application</a>
+      <a href="#" class="gpr-ql-card" style="background:#d81b8e;">Army Religious Teacher Online Form 2023</a>
+    </div>
+  </div>
+</div>
+
+<!-- ════ 3. MARQUEE ════ -->
+<div class="gpr-marquee-wrap">
+  <div class="gpr-marquee-box">
+    <span class="gpr-marquee-label">🔔 Live</span>
+    <marquee behavior="scroll" direction="left" scrollamount="4"
+             onmouseover="this.stop();" onmouseout="this.start();">
+      <a href="#">Bihar CET B.Ed Admission Application</a> &#x2022;
+      <a href="#">CUET UG Admission Application Form</a> &#x2022;
+      <a href="#">Bihar DElEd Admission Online</a> &#x2022;
+      <a href="#">MP ESB High School TET Admit Card</a> &#x2022;
+      <a href="#">Rajasthan High Court Clerk Admit Card</a> &#x2022;
+      <a href="#">KVS Teaching &amp; Non-Teaching Admit Card</a> &#x2022;
+      <a href="#">BSF Constable Tradesman Online Form</a> &#x2022;
+      <a href="#">Delhi DSSSB Various Post Online Form</a> &#x2022;
+      <a href="#">Haryana TGT Teacher Online Form</a>
+    </marquee>
+  </div>
+</div>
+
+<!-- ════ 4. SOCIAL BUTTONS ════ -->
+<div class="gpr-social-row">
+  <a href="#" class="gpr-social-btn gpr-social-wa">
+    <svg width="22" height="22" viewBox="0 0 32 32" fill="white">
+      <path d="M16 1C7.73 1 1 7.73 1 16c0 2.67.67 5.18 1.87 7.37L1 31l7.87-1.84A14.93 14.93 0 0 0 16 31c8.27 0 15-6.73 15-15S24.27 1 16 1zm0 27.2a12.1 12.1 0 0 1-6.18-1.7l-.44-.26-4.67 1.09 1.12-4.54-.29-.47A12.16 12.16 0 1 1 16 28.2zm6.65-9.07c-.37-.18-2.17-1.07-2.51-1.19-.33-.12-.57-.18-.82.18s-.93 1.19-1.15 1.44-.43.27-.79.09a9.96 9.96 0 0 1-2.93-1.81 10.97 10.97 0 0 1-2.03-2.52c-.21-.37 0-.56.16-.74.16-.17.37-.43.55-.65.18-.22.24-.37.37-.61.12-.24.06-.46-.03-.64-.09-.18-.82-1.97-1.12-2.7-.29-.71-.59-.61-.82-.62h-.7c-.24 0-.64.09-.97.46-.33.37-1.27 1.24-1.27 3.02s1.3 3.5 1.48 3.74c.18.24 2.55 3.9 6.18 5.47.86.37 1.54.59 2.06.76.87.27 1.66.23 2.28.14.7-.1 2.17-.89 2.47-1.74.31-.85.31-1.58.22-1.74-.09-.16-.33-.24-.7-.42z"/>
+    </svg>
+    Join WhatsApp
+  </a>
+  <a href="#" class="gpr-social-btn gpr-social-yt">
+    <svg width="24" height="18" viewBox="0 0 24 18" fill="white">
+      <path d="M23.5 2.8A3 3 0 0 0 21.4.7C19.5.2 12 .2 12 .2S4.5.2 2.6.7A3 3 0 0 0 .5 2.8C0 4.7 0 8.7 0 8.7s0 4 .5 5.9a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.9.5-5.9s0-4-.5-5.9zM9.6 12.5V5l6.3 3.7-6.3 3.8z"/>
+    </svg>
+    Join Youtube
+  </a>
+  <a href="#" class="gpr-social-btn gpr-social-tg">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+      <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.94 8.19-1.97 9.28c-.14.63-.52.78-1.05.49l-2.9-2.14-1.4 1.35c-.15.15-.28.28-.58.28l.21-2.95 5.34-4.82c.23-.21-.05-.32-.36-.11L6.38 14.4l-2.86-.9c-.62-.19-.63-.62.13-.92l11.17-4.31c.52-.19.97.12.8.92h.32z"/>
+    </svg>
+    Join Telegram
+  </a>
+</div>
+
+<!-- ════ 5. CATEGORY ICONS ════ -->
+<div class="gpr-icons-wrap">
+  <div class="gpr-icons-box">
+    <a href="#" class="gpr-icon-item">
+      <img src="https://img.icons8.com/color/96/school.png" alt="Education"/>
+      <span>Education</span>
+    </a>
+    <a href="#" class="gpr-icon-item">
+      <img src="https://img.icons8.com/color/96/bank-building.png" alt="Bank Jobs"/>
+      <span>Bank Jobs</span>
+    </a>
+    <a href="#" class="gpr-icon-item">
+      <img src="https://img.icons8.com/color/96/policeman-male--v1.png" alt="Police Jobs"/>
+      <span>Police Jobs</span>
+    </a>
+    <a href="#" class="gpr-icon-item">
+      <img src="https://img.icons8.com/color/96/defending.png" alt="Defense Jobs"/>
+      <span>Defense Jobs</span>
+    </a>
+    <a href="#" class="gpr-icon-item">
+      <img src="https://img.icons8.com/color/96/application-form.png" alt="Online Form"/>
+      <span>Online Form</span>
+    </a>
+    <a href="#" class="gpr-icon-item">
+      <img src="https://img.icons8.com/color/96/find-matching-job.png" alt="Latest Jobs"/>
+      <span>Latest Jobs</span>
+    </a>
+    <a href="#" class="gpr-icon-item">
+      <img src="https://img.icons8.com/color/96/train.png" alt="Railway Jobs"/>
+      <span>Railway Jobs</span>
+    </a>
+    <a href="#" class="gpr-icon-item">
+      <img src="https://img.icons8.com/color/96/teacher.png" alt="Teaching Jobs"/>
+      <span>Teaching Jobs</span>
+    </a>
+  </div>
+</div>
+
+<!-- ════ 6. CATEGORY POST SECTIONS ════ -->
+<div class="gpr-sections-outer">
+  <div class="gpr-sections-grid">
+
+    <!-- Bank Job -->
+    <div class="gpr-section-card">
+      <div class="gpr-card-header">Bank Job</div>
+      <ul class="gpr-card-list">
+        <li>
+          <a href="#">Bank of Maharashtra Recruitment 2025 Apply Online</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-new">Status: New</b></span>
+            <span>&#128197; Last Apply: 2025-07-06</span>
+          </div>
+        </li>
+        <li>
+          <a href="#">Central Bank of India Zone Based Officer Recruitment 2025</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-new">Status: New</b></span>
+            <span>&#128197; Last Apply: 2025-07-04</span>
+          </div>
+        </li>
+        <li>
+          <a href="#">SBI Data Scientist Recruitment 2025</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-new">Status: New</b></span>
+            <span>&#128197; Last Apply: 2025-07-09</span>
+          </div>
+        </li>
+        <li>
+          <a href="#">Punjab National Bank Recruitment 2025 Apply Online</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-new">Status: New</b></span>
+            <span>&#128197; Last Apply: 2025-07-25</span>
+          </div>
+        </li>
+        <li>
+          <a href="#">NABARD Chief Risk Manager Jobs 2025: Apply Online</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-upd">Status: Updated</b></span>
+            <span>&#128197; Last Apply: 2025-07-05</span>
+          </div>
+        </li>
+        <li>
+          <a href="#">Mail Motor Service Recruitment 2025: Apply for 25 Driver Vacancies</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-ext">Status: Extended</b></span>
+            <span>&#128197; Last Apply: 2025-06-11</span>
+          </div>
+        </li>
+      </ul>
+      <div class="gpr-card-footer">
+        <a href="#" class="gpr-view-more">View More &rsaquo;</a>
+      </div>
+    </div>
+
+    <!-- Railway -->
+    <div class="gpr-section-card">
+      <div class="gpr-card-header">Railway</div>
+      <ul class="gpr-card-list">
+        <li>
+          <a href="#">East Central Railway Apprentice Recruitment 2025: Apply Online</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-new">Status: New</b></span>
+            <span>&#128197; Last Apply: 2025-06-29</span>
+          </div>
+        </li>
+        <li>
+          <a href="#">RRC Gorakhpur Apprentice Recruitment 2025: Apply Online</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-new">Status: New</b></span>
+            <span>&#128197; Last Apply: 2025-07-02</span>
+          </div>
+        </li>
+        <li>
+          <a href="#">RRB Ministerial and Isolated Categories Notification 2025</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-new">Status: New</b></span>
+            <span>&#128197; Last Apply: 2025-07-20</span>
+          </div>
+        </li>
+        <li>
+          <a href="#">DFCCIL MTS and Executive Recruitment 2025: Apply Online</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-upd">Status: Updated</b></span>
+            <span>&#128197; Last Apply: 2025-08-04</span>
+          </div>
+        </li>
+        <li>
+          <a href="#">SECR Railway Teacher Recruitment 2025</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-ext">Status: Extended</b></span>
+            <span>&#128197; Last Apply: 2025-06-13</span>
+          </div>
+        </li>
+        <li>
+          <a href="#">MP Metro Rail Recruitment 2025 Apply Online</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-ext">Status: Extended</b></span>
+            <span>&#128197; Last Apply: 2025-07-04</span>
+          </div>
+        </li>
+      </ul>
+      <div class="gpr-card-footer">
+        <a href="#" class="gpr-view-more">View More &rsaquo;</a>
+      </div>
+    </div>
+
+    <!-- Police Job -->
+    <div class="gpr-section-card">
+      <div class="gpr-card-header">Police Job</div>
+      <ul class="gpr-card-list">
+        <li>
+          <a href="#">CISF Constable Driver Recruitment 2025: Apply Online</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-new">Status: New</b></span>
+            <span>&#128197; Last Apply: 2025-06-12</span>
+          </div>
+        </li>
+        <li>
+          <a href="#">Bihar Home Guard Recruitment 2025 Apply Online</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-new">Status: New</b></span>
+            <span>&#128197; Last Apply: 2025-06-20</span>
+          </div>
+        </li>
+        <li>
+          <a href="#">SSB Recruitment 2025 Notification for 272 Constable GD Posts</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-new">Status: New</b></span>
+            <span>&#128197; Last Apply: 2025-06-19</span>
+          </div>
+        </li>
+        <li>
+          <a href="#">CRPF Recruitment 2025 Apply Online</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-upd">Status: Updated</b></span>
+            <span>&#128197; Last Apply: 2025-06-27</span>
+          </div>
+        </li>
+        <li>
+          <a href="#">BSF Recruitment 2025 (252 Latest Vacancies Opening)</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-ext">Status: Extended</b></span>
+            <span>&#128197; Last Apply: 2025-07-10</span>
+          </div>
+        </li>
+        <li>
+          <a href="#">UPSC CAPF AC Recruitment 2024 Apply Online</a>
+          <div class="gpr-meta">
+            <span>&#9632; <b class="gpr-status-upd">Status: Updated</b></span>
+            <span>&#128197; Last Apply: 2025-06-20</span>
+          </div>
+        </li>
+      </ul>
+      <div class="gpr-card-footer">
+        <a href="#" class="gpr-view-more">View More &rsaquo;</a>
+      </div>
+    </div>
+
+    <!-- Admission -->
+    <div class="gpr-section-card">
+      <div class="gpr-card-header">Admission</div>
+      <ul class="gpr-card-list">
+        <li><a href="#">NTA Graduate Pharmacy Aptitude Test GPAT Application Form 2023</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-new">Status: New</b></span></div></li>
+        <li><a href="#">Bihar CET B.Ed Admission Application Form 2023</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-new">Status: New</b></span></div></li>
+        <li><a href="#">CUET UG Admission Application Form 2023</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-new">Status: New</b></span></div></li>
+        <li><a href="#">UP B.Ed JEE Admission Application Form 2023</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-new">Status: New</b></span></div></li>
+        <li><a href="#">Bihar DElEd Admission Online Application Form 2023-25</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-upd">Status: Updated</b></span></div></li>
+        <li><a href="#">MP ITI Admission Online Form 2023</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-ext">Status: Extended</b></span></div></li>
+      </ul>
+      <div class="gpr-card-footer"><a href="#" class="gpr-view-more">View More &rsaquo;</a></div>
+    </div>
+
+    <!-- Admit Card -->
+    <div class="gpr-section-card">
+      <div class="gpr-card-header">Admit Card</div>
+      <ul class="gpr-card-list">
+        <li><a href="#">SSC 10+2 CHSL 2022 Tier I Admit Card 2023</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-new">Status: New</b></span></div></li>
+        <li><a href="#">Rajasthan High Court Clerk, JJA Admit Card 2023</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-new">Status: New</b></span></div></li>
+        <li><a href="#">MP ESB High School TET Admit Card 2023</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-new">Status: New</b></span></div></li>
+        <li><a href="#">CRPF HC Ministerial and ASI Steno Admit Card 2023</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-upd">Status: Updated</b></span></div></li>
+        <li><a href="#">Upper Primary Teacher REET Mains Exam Admit Card 2023</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-upd">Status: Updated</b></span></div></li>
+        <li><a href="#">KVS Teaching &amp; Non-Teaching Admit Card 2023</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-ext">Status: Extended</b></span></div></li>
+      </ul>
+      <div class="gpr-card-footer"><a href="#" class="gpr-view-more">View More &rsaquo;</a></div>
+    </div>
+
+    <!-- Results -->
+    <div class="gpr-section-card">
+      <div class="gpr-card-header">Results</div>
+      <ul class="gpr-card-list">
+        <li><a href="#">Allahabad University Group C Post Result 2023</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-new">Status: New</b></span></div></li>
+        <li><a href="#">SBI Circle Based Officer CBO Result 2023 PDF Download</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-new">Status: New</b></span></div></li>
+        <li><a href="#">UPPCL Executive Assistant Result 2023 – Merit List</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-upd">Status: Updated</b></span></div></li>
+        <li><a href="#">IBPS SO XII Pre Result with Marks 2023</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-upd">Status: Updated</b></span></div></li>
+        <li><a href="#">Railway RRC Group D PET PST DV Test Result 2023</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-ext">Status: Extended</b></span></div></li>
+        <li><a href="#">SSC Junior Engineer JE Tier I Result 2023 – Merit List</a><div class="gpr-meta"><span>&#9632; <b class="gpr-status-ext">Status: Extended</b></span></div></li>
+      </ul>
+      <div class="gpr-card-footer"><a href="#" class="gpr-view-more">View More &rsaquo;</a></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════ 7. ABOUT SECTION ════ -->
+<div class="gpr-about-outer">
+  <div class="gpr-about-box">
+    <div class="gpr-about-header">Sarkari Result 2023</div>
+    <div class="gpr-about-body">
+      <p>Sarkari Result, the popular online platform dedicated to providing information on government job opportunities and exam results, continues to play a vital role in empowering job seekers in 2023. As the demand for secure and stable employment remains high, this article explores the significance of Sarkari Result in assisting aspirants and highlights the latest developments in government job recruitment.</p>
+    </div>
+  </div>
+</div>
+
+</div><!-- .gpr-wrap -->
+
+<!-- /wp:html -->
