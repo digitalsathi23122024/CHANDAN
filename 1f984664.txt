@@ -1,0 +1,596 @@
+<!-- wp:generateblocks/container {"uniqueId":"hero001","isDynamic":true,"blockVersion":4,"spacing":{"paddingTop":"0px","paddingBottom":"0px"}} -->
+<!-- wp:generateblocks/container {"uniqueId":"hero002","isDynamic":true,"blockVersion":4,"useGlobalMaxWidth":false,"spacing":{"marginRight":"auto","marginLeft":"auto"}} -->
+
+<!-- wp:html -->
+<style>
+.gp-hero-banner {
+  background: linear-gradient(135deg, #0a9e72 0%, #07c88a 40%, #0dcfaa 70%, #1ab5d4 100%);
+  padding: 50px 20px 40px;
+  text-align: center;
+}
+.gp-hero-banner h1 {
+  color: #ffffff !important;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.gp-hero-banner .search-wrap {
+  display: flex;
+  justify-content: center;
+  max-width: 560px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.gp-hero-banner .search-wrap input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 14px 20px;
+  font-size: 15px;
+  color: #333;
+  background: transparent;
+}
+.gp-hero-banner .search-wrap button {
+  background: #1a1a1a;
+  border: none;
+  padding: 14px 22px;
+  cursor: pointer;
+  border-radius: 0 50px 50px 0;
+}
+.gp-hero-banner .search-wrap button svg { display: block; }
+
+/* Quick links card grid */
+.gp-quicklinks {
+  background: #fff;
+  max-width: 1100px;
+  margin: -10px auto 0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+.gp-quicklinks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+@media(max-width:767px){
+  .gp-quicklinks-grid { grid-template-columns: repeat(2, 1fr); }
+  .gp-hero-banner h1 { font-size: 22px; }
+}
+.gp-ql-card {
+  display: block;
+  text-align: center;
+  padding: 16px 10px;
+  border-radius: 8px;
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none !important;
+  line-height: 1.4;
+  transition: opacity .2s, transform .2s;
+}
+.gp-ql-card:hover { opacity: .88; transform: translateY(-2px); text-decoration: none !important; }
+
+/* Social Buttons */
+.gp-social-row {
+  display: flex;
+  gap: 12px;
+  max-width: 1100px;
+  margin: 22px auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+.gp-social-btn {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff !important;
+  text-decoration: none !important;
+  transition: opacity .2s, transform .2s;
+}
+.gp-social-btn:hover { opacity: .88; transform: translateY(-2px); text-decoration: none !important; }
+.gp-social-btn svg { flex-shrink: 0; }
+.gp-social-wa  { background: #25d366; }
+.gp-social-yt  { background: #ff0000; }
+.gp-social-tg  { background: #0088cc; }
+
+/* Category Icons */
+.gp-cat-icons {
+  max-width: 1100px;
+  margin: 10px auto 24px;
+  padding: 16px 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
+.gp-cat-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none !important;
+  color: #333 !important;
+  font-size: 13px;
+  font-weight: 600;
+  min-width: 80px;
+  text-align: center;
+  transition: color .2s;
+}
+.gp-cat-icon-item:hover { color: #0a9e72 !important; }
+.gp-cat-icon-item img { width: 52px; height: 52px; object-fit: contain; }
+
+/* Category Post Sections */
+.gp-sections-wrap {
+  max-width: 1140px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media(max-width:900px){ .gp-sections-wrap { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:600px){ .gp-sections-wrap { grid-template-columns: 1fr; } }
+
+.gp-section-box {
+  border: 1px solid #e0ede8;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(10,158,114,0.07);
+}
+.gp-section-box .gp-box-header {
+  background: #0a9e72;
+  color: #fff;
+  text-align: center;
+  padding: 12px 10px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+.gp-section-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+.gp-section-box ul li {
+  padding: 9px 14px;
+  border-bottom: 1px solid #f0f5f3;
+  font-size: 14px;
+  font-weight: 600;
+}
+.gp-section-box ul li:last-child { border-bottom: none; }
+.gp-section-box ul li a {
+  color: #1a1a1a !important;
+  text-decoration: none !important;
+  display: block;
+  line-height: 1.4;
+}
+.gp-section-box ul li a:hover { color: #0a9e72 !important; }
+.gp-section-box .gp-meta {
+  font-size: 11px;
+  color: #888;
+  font-weight: 400;
+  margin-top: 3px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.gp-meta .status-new    { color: #0a9e72; font-weight: 600; }
+.gp-meta .status-update { color: #f97316; font-weight: 600; }
+.gp-meta .status-ext    { color: #e53935; font-weight: 600; }
+.gp-section-box .gp-view-more {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  border-top: 1px solid #e0ede8;
+}
+.gp-view-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #0a9e72;
+  color: #fff !important;
+  padding: 8px 28px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background .2s;
+}
+.gp-view-more-btn:hover { background: #077a57; }
+
+/* Marquee Section */
+.gp-marquee-wrap {
+  max-width: 1100px;
+  margin: 0 auto 18px;
+  padding: 0 20px;
+}
+.gp-marquee-box {
+  background: #fff8f0;
+  border: 1px solid #fdd9b5;
+  border-radius: 8px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+}
+.gp-marquee-label {
+  background: #f97316;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.gp-marquee-box marquee a {
+  color: #0a7c59;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 0 8px;
+}
+.gp-marquee-box marquee a:hover { color: #f97316; }
+</style>
+
+<!-- HERO BANNER -->
+<div class="gp-hero-banner">
+  <h1>No #1 Platform For Job Updates</h1>
+  <div class="search-wrap">
+    <input type="text" placeholder="Search jobs, results, admit cards..." />
+    <button>
+      <svg width="20" height="20" fill="white" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" stroke="white" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- JOB QUICK LINKS -->
+<div class="gp-quicklinks">
+  <div class="gp-quicklinks-grid">
+    <a href="#" class="gp-ql-card" style="background:#5d8a0f;">UPSC EPFO Recruitment 2023 Apply Online</a>
+    <a href="#" class="gp-ql-card" style="background:#1565c0;">IDBI Bank Assistant Manager Recruitment 2023</a>
+    <a href="#" class="gp-ql-card" style="background:#e65c00;">Haryana HPSC Civil Services Recruitment 2023</a>
+    <a href="#" class="gp-ql-card" style="background:#b71c1c;">Assam Rifles Technical Recruitment 2023</a>
+    <a href="#" class="gp-ql-card" style="background:#e53935;">Bihar CET B.Ed Admission Application Form</a>
+    <a href="#" class="gp-ql-card" style="background:#0a9e72;">UP B.Ed JEE Admission Application Form</a>
+    <a href="#" class="gp-ql-card" style="background:#0288d1;">Bihar DElEd Admission Online Application</a>
+    <a href="#" class="gp-ql-card" style="background:#d81b8e;">Army Religious Teacher Online Form 2023</a>
+  </div>
+</div>
+
+<!-- MARQUEE NOTICES -->
+<div class="gp-marquee-wrap" style="margin-top:18px;">
+  <div class="gp-marquee-box">
+    <span class="gp-marquee-label">🔔 Live</span>
+    <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+      <a href="#">Bihar CET B.Ed Admission Application</a> &#x2022;
+      <a href="#">CUET UG Admission Application Form</a> &#x2022;
+      <a href="#">Bihar DElEd Admission Online</a> &#x2022;
+      <a href="#">MP ESB High School TET Admit Card</a> &#x2022;
+      <a href="#">Rajasthan High Court Clerk Admit Card</a> &#x2022;
+      <a href="#">KVS Teaching &amp; Non-Teaching Admit Card</a> &#x2022;
+      <a href="#">BSF Constable Tradesman Online Form</a> &#x2022;
+      <a href="#">Delhi DSSSB Various Post Online Form</a> &#x2022;
+      <a href="#">Haryana TGT Teacher Online Form</a>
+    </marquee>
+  </div>
+</div>
+
+<!-- SOCIAL JOIN BUTTONS -->
+<div class="gp-social-row">
+  <a href="#" class="gp-social-btn gp-social-wa">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.119 1.529 5.845L0 24l6.335-1.51A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.368l-.36-.214-3.724.978.994-3.636-.234-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/></svg>
+    Join WhatsApp
+  </a>
+  <a href="#" class="gp-social-btn gp-social-yt">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+    Join Youtube
+  </a>
+  <a href="#" class="gp-social-btn gp-social-tg">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+    Join Telegram
+  </a>
+</div>
+
+<!-- CATEGORY ICONS -->
+<div class="gp-cat-icons">
+  <a href="#" class="gp-cat-icon-item">
+    <img src="https://img.icons8.com/color/96/school.png" alt="Education"/>
+    <span>Education</span>
+  </a>
+  <a href="#" class="gp-cat-icon-item">
+    <img src="https://img.icons8.com/color/96/bank-building.png" alt="Bank Jobs"/>
+    <span>Bank Jobs</span>
+  </a>
+  <a href="#" class="gp-cat-icon-item">
+    <img src="https://img.icons8.com/color/96/policeman-male.png" alt="Police Jobs"/>
+    <span>Police Jobs</span>
+  </a>
+  <a href="#" class="gp-cat-icon-item">
+    <img src="https://img.icons8.com/color/96/defence.png" alt="Defense Jobs"/>
+    <span>Defense Jobs</span>
+  </a>
+  <a href="#" class="gp-cat-icon-item">
+    <img src="https://img.icons8.com/color/96/application-form.png" alt="Online Form"/>
+    <span>Online Form</span>
+  </a>
+  <a href="#" class="gp-cat-icon-item">
+    <img src="https://img.icons8.com/color/96/find-matching-job.png" alt="Latest Jobs"/>
+    <span>Latest Jobs</span>
+  </a>
+  <a href="#" class="gp-cat-icon-item">
+    <img src="https://img.icons8.com/color/96/train.png" alt="Railway Jobs"/>
+    <span>Railway Jobs</span>
+  </a>
+  <a href="#" class="gp-cat-icon-item">
+    <img src="https://img.icons8.com/color/96/teacher.png" alt="Teaching Jobs"/>
+    <span>Teaching Jobs</span>
+  </a>
+</div>
+
+<!-- CATEGORY POST SECTIONS (6 boxes, 3 per row) -->
+<div class="gp-sections-wrap">
+
+  <!-- BOX 1: Latest Jobs -->
+  <div class="gp-section-box">
+    <div class="gp-box-header">Latest Jobs</div>
+    <ul id="gp-cat-1">
+      <li><a href="#">Loading posts...</a></li>
+    </ul>
+    <div class="gp-view-more">
+      <a href="#" class="gp-view-more-btn">View More &rsaquo;</a>
+    </div>
+  </div>
+
+  <!-- BOX 2: Admit Card -->
+  <div class="gp-section-box">
+    <div class="gp-box-header">Admit Card</div>
+    <ul id="gp-cat-2">
+      <li><a href="#">Loading posts...</a></li>
+    </ul>
+    <div class="gp-view-more">
+      <a href="#" class="gp-view-more-btn">View More &rsaquo;</a>
+    </div>
+  </div>
+
+  <!-- BOX 3: Results -->
+  <div class="gp-section-box">
+    <div class="gp-box-header">Results</div>
+    <ul id="gp-cat-3">
+      <li><a href="#">Loading posts...</a></li>
+    </ul>
+    <div class="gp-view-more">
+      <a href="#" class="gp-view-more-btn">View More &rsaquo;</a>
+    </div>
+  </div>
+
+  <!-- BOX 4: Answer Key -->
+  <div class="gp-section-box">
+    <div class="gp-box-header">Answer Key</div>
+    <ul id="gp-cat-4">
+      <li><a href="#">Loading posts...</a></li>
+    </ul>
+    <div class="gp-view-more">
+      <a href="#" class="gp-view-more-btn">View More &rsaquo;</a>
+    </div>
+  </div>
+
+  <!-- BOX 5: Syllabus -->
+  <div class="gp-section-box">
+    <div class="gp-box-header">Syllabus</div>
+    <ul id="gp-cat-5">
+      <li><a href="#">Loading posts...</a></li>
+    </ul>
+    <div class="gp-view-more">
+      <a href="#" class="gp-view-more-btn">View More &rsaquo;</a>
+    </div>
+  </div>
+
+  <!-- BOX 6: Admission -->
+  <div class="gp-section-box">
+    <div class="gp-box-header">Admission</div>
+    <ul id="gp-cat-6">
+      <li><a href="#">Loading posts...</a></li>
+    </ul>
+    <div class="gp-view-more">
+      <a href="#" class="gp-view-more-btn">View More &rsaquo;</a>
+    </div>
+  </div>
+
+</div>
+<!-- /wp:html -->
+
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+
+<!-- wp:generateblocks/container {"uniqueId":"227c5092","isDynamic":true,"blockVersion":4,"spacing":{"paddingTop":"30px","paddingBottom":"30px","paddingLeftTablet":"20px","paddingRightTablet":"20px"}} -->
+<!-- wp:generateblocks/container {"uniqueId":"c4f23dc1","isDynamic":true,"blockVersion":4,"useGlobalMaxWidth":true,"spacing":{"marginRight":"auto","marginLeft":"auto"}} -->
+<!-- wp:generateblocks/grid {"uniqueId":"6c001c90","columns":6,"horizontalGap":40,"verticalGap":40,"isDynamic":true,"blockVersion":3} -->
+<!-- wp:generateblocks/container {"uniqueId":"8b583b48","isGrid":true,"gridId":"6c001c90","isDynamic":true,"blockVersion":4,"sizing":{"width":"33.33%","widthMobile":"100%","widthTablet":"50%"},"borders":{"borderTopWidth":"2px","borderRightWidth":"2px","borderBottomWidth":"2px","borderLeftWidth":"2px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"var(\u002d\u002dcolor-background)","borderRightColor":"var(\u002d\u002dcolor-background)","borderBottomColor":"var(\u002d\u002dcolor-background)","borderLeftColor":"var(\u002d\u002dcolor-background)","borderTopColorHover":"var(\u002d\u002dcolor-background-hover)","borderRightColorHover":"var(\u002d\u002dcolor-background-hover)","borderBottomColorHover":"var(\u002d\u002dcolor-background-hover)","borderLeftColorHover":"var(\u002d\u002dcolor-background-hover)"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"c750eeb2","blockVersion":3,"typography":{"textAlign":"center","fontSize":"22px"},"spacing":{"marginBottom":"15px","paddingTop":"10px","paddingBottom":"10px","paddingLeft":"10px","paddingRight":"10px"},"backgroundColor":"var(\u002d\u002dcolor-background-hover)","textColor":"#ffffff"} -->
+<h2 class="gb-headline gb-headline-c750eeb2 gb-headline-text">Category</h2>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/query-loop {"uniqueId":"6346672e","query":{"post_type":"post","per_page":"6"}} -->
+<!-- wp:generateblocks/grid {"uniqueId":"8f609f0c","columns":1,"verticalGap":5,"isDynamic":true,"blockVersion":3,"isQueryLoop":true,"lock":{"remove":true}} -->
+<!-- wp:generateblocks/container {"uniqueId":"b869fccd","isGrid":true,"isQueryLoopItem":true,"gridId":"8f609f0c","isDynamic":true,"blockVersion":4,"sizing":{"width":"100%"},"spacing":{"marginLeft":"10px","marginRight":"10px"},"lock":{"remove":true,"move":true}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"3c5ef255","element":"p","blockVersion":3,"display":"flex","alignItems":"center","columnGap":"0.5em","typography":{"fontSize":"16px","fontWeight":""},"spacing":{"marginBottom":"0px"},"hasIcon":true,"iconStyles":{"height":"1.4em","width":"1.4em"},"useDynamicData":true,"dynamicContentType":"post-title","dynamicLinkType":"single-post"} -->
+<p class="gb-headline gb-headline-3c5ef255"><span class="gb-icon"><svg viewBox="0 0 16 16" class="bi bi-dot" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">   <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path> </svg></span><span class="gb-headline-text"></span></p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/query-loop -->
+
+<!-- wp:generateblocks/container {"uniqueId":"b9fdedaa","isDynamic":true,"blockVersion":4,"typography":{"textAlign":"right"},"spacing":{"marginRight":"15px","marginLeft":"15px","marginBottom":"15px","marginTop":"15px"}} -->
+<!-- wp:generateblocks/button {"uniqueId":"06cc4368","blockVersion":4,"display":"inline-flex","typography":{"fontWeight":"600","fontSize":"14px"},"spacing":{"paddingTop":"5px","paddingRight":"20px","paddingBottom":"5px","paddingLeft":"20px"},"borders":{"borderTopWidth":"2px","borderRightWidth":"2px","borderBottomWidth":"2px","borderLeftWidth":"2px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"var(\u002d\u002dtext-2)","borderRightColor":"var(\u002d\u002dtext-2)","borderBottomColor":"var(\u002d\u002dtext-2)","borderLeftColor":"var(\u002d\u002dtext-2)","borderTopColorHover":"var(\u002d\u002dcolor-background-hover)","borderRightColorHover":"var(\u002d\u002dcolor-background-hover)","borderBottomColorHover":"var(\u002d\u002dcolor-background-hover)","borderLeftColorHover":"var(\u002d\u002dcolor-background-hover)"},"textColor":"var(\u002d\u002dtext-2)","textColorHover":"var(\u002d\u002dcolor-background-hover)"} -->
+<span class="gb-button gb-button-06cc4368 gb-button-text">View More</span>
+<!-- /wp:generateblocks/button -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"c7ff4458","isGrid":true,"gridId":"6c001c90","isDynamic":true,"blockVersion":4,"sizing":{"width":"33.33%","widthMobile":"100%","widthTablet":"50%"},"borders":{"borderTopWidth":"2px","borderRightWidth":"2px","borderBottomWidth":"2px","borderLeftWidth":"2px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"var(\u002d\u002dcolor-background)","borderRightColor":"var(\u002d\u002dcolor-background)","borderBottomColor":"var(\u002d\u002dcolor-background)","borderLeftColor":"var(\u002d\u002dcolor-background)","borderTopColorHover":"var(\u002d\u002dcolor-background-hover)","borderRightColorHover":"var(\u002d\u002dcolor-background-hover)","borderBottomColorHover":"var(\u002d\u002dcolor-background-hover)","borderLeftColorHover":"var(\u002d\u002dcolor-background-hover)"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"1d3727c2","blockVersion":3,"typography":{"textAlign":"center","fontSize":"22px"},"spacing":{"marginBottom":"15px","paddingTop":"10px","paddingBottom":"10px","paddingLeft":"10px","paddingRight":"10px"},"backgroundColor":"var(\u002d\u002dcolor-background-hover)","textColor":"#ffffff"} -->
+<h2 class="gb-headline gb-headline-1d3727c2 gb-headline-text">Category</h2>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/query-loop {"uniqueId":"31569917","query":{"post_type":"post","per_page":"6"}} -->
+<!-- wp:generateblocks/grid {"uniqueId":"039031f5","columns":1,"verticalGap":5,"isDynamic":true,"blockVersion":3,"isQueryLoop":true,"lock":{"remove":true}} -->
+<!-- wp:generateblocks/container {"uniqueId":"18679345","isGrid":true,"isQueryLoopItem":true,"gridId":"039031f5","isDynamic":true,"blockVersion":4,"sizing":{"width":"100%"},"spacing":{"marginLeft":"10px","marginRight":"10px"},"lock":{"remove":true,"move":true}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"e4eb5523","element":"p","blockVersion":3,"display":"flex","alignItems":"center","columnGap":"0.5em","typography":{"fontSize":"16px","fontWeight":""},"spacing":{"marginBottom":"0px"},"hasIcon":true,"iconStyles":{"height":"1.4em","width":"1.4em"},"useDynamicData":true,"dynamicContentType":"post-title","dynamicLinkType":"single-post"} -->
+<p class="gb-headline gb-headline-e4eb5523"><span class="gb-icon"><svg viewBox="0 0 16 16" class="bi bi-dot" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">   <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path> </svg></span><span class="gb-headline-text"></span></p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/query-loop -->
+
+<!-- wp:generateblocks/container {"uniqueId":"efe56c0d","isDynamic":true,"blockVersion":4,"typography":{"textAlign":"right"},"spacing":{"marginRight":"15px","marginLeft":"15px","marginBottom":"15px","marginTop":"15px"}} -->
+<!-- wp:generateblocks/button {"uniqueId":"e1b774ee","blockVersion":4,"display":"inline-flex","typography":{"fontWeight":"600","fontSize":"14px"},"spacing":{"paddingTop":"5px","paddingRight":"20px","paddingBottom":"5px","paddingLeft":"20px"},"borders":{"borderTopWidth":"2px","borderRightWidth":"2px","borderBottomWidth":"2px","borderLeftWidth":"2px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"var(\u002d\u002dtext-2)","borderRightColor":"var(\u002d\u002dtext-2)","borderBottomColor":"var(\u002d\u002dtext-2)","borderLeftColor":"var(\u002d\u002dtext-2)","borderTopColorHover":"var(\u002d\u002dcolor-background-hover)","borderRightColorHover":"var(\u002d\u002dcolor-background-hover)","borderBottomColorHover":"var(\u002d\u002dcolor-background-hover)","borderLeftColorHover":"var(\u002d\u002dcolor-background-hover)"},"textColor":"var(\u002d\u002dtext-2)","textColorHover":"var(\u002d\u002dcolor-background-hover)"} -->
+<span class="gb-button gb-button-e1b774ee gb-button-text">View More</span>
+<!-- /wp:generateblocks/button -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"2081500d","isGrid":true,"gridId":"6c001c90","isDynamic":true,"blockVersion":4,"sizing":{"width":"33.33%","widthMobile":"100%","widthTablet":"50%"},"borders":{"borderTopWidth":"2px","borderRightWidth":"2px","borderBottomWidth":"2px","borderLeftWidth":"2px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"var(\u002d\u002dcolor-background)","borderRightColor":"var(\u002d\u002dcolor-background)","borderBottomColor":"var(\u002d\u002dcolor-background)","borderLeftColor":"var(\u002d\u002dcolor-background)","borderTopColorHover":"var(\u002d\u002dcolor-background-hover)","borderRightColorHover":"var(\u002d\u002dcolor-background-hover)","borderBottomColorHover":"var(\u002d\u002dcolor-background-hover)","borderLeftColorHover":"var(\u002d\u002dcolor-background-hover)"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"8089ea08","blockVersion":3,"typography":{"textAlign":"center","fontSize":"22px"},"spacing":{"marginBottom":"15px","paddingTop":"10px","paddingBottom":"10px","paddingLeft":"10px","paddingRight":"10px"},"backgroundColor":"var(\u002d\u002dcolor-background-hover)","textColor":"#ffffff"} -->
+<h2 class="gb-headline gb-headline-8089ea08 gb-headline-text">Category</h2>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/query-loop {"uniqueId":"733af440","query":{"post_type":"post","per_page":"6"}} -->
+<!-- wp:generateblocks/grid {"uniqueId":"dbb57515","columns":1,"verticalGap":5,"isDynamic":true,"blockVersion":3,"isQueryLoop":true,"lock":{"remove":true}} -->
+<!-- wp:generateblocks/container {"uniqueId":"f4557e90","isGrid":true,"isQueryLoopItem":true,"gridId":"dbb57515","isDynamic":true,"blockVersion":4,"sizing":{"width":"100%"},"spacing":{"marginLeft":"10px","marginRight":"10px"},"lock":{"remove":true,"move":true}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"d5ed4fa1","element":"p","blockVersion":3,"display":"flex","alignItems":"center","columnGap":"0.5em","typography":{"fontSize":"16px","fontWeight":""},"spacing":{"marginBottom":"0px"},"hasIcon":true,"iconStyles":{"height":"1.4em","width":"1.4em"},"useDynamicData":true,"dynamicContentType":"post-title","dynamicLinkType":"single-post"} -->
+<p class="gb-headline gb-headline-d5ed4fa1"><span class="gb-icon"><svg viewBox="0 0 16 16" class="bi bi-dot" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">   <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path> </svg></span><span class="gb-headline-text"></span></p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/query-loop -->
+
+<!-- wp:generateblocks/container {"uniqueId":"9f699543","isDynamic":true,"blockVersion":4,"typography":{"textAlign":"right"},"spacing":{"marginRight":"15px","marginLeft":"15px","marginBottom":"15px","marginTop":"15px"}} -->
+<!-- wp:generateblocks/button {"uniqueId":"1d63c924","blockVersion":4,"display":"inline-flex","typography":{"fontWeight":"600","fontSize":"14px"},"spacing":{"paddingTop":"5px","paddingRight":"20px","paddingBottom":"5px","paddingLeft":"20px"},"borders":{"borderTopWidth":"2px","borderRightWidth":"2px","borderBottomWidth":"2px","borderLeftWidth":"2px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"var(\u002d\u002dtext-2)","borderRightColor":"var(\u002d\u002dtext-2)","borderBottomColor":"var(\u002d\u002dtext-2)","borderLeftColor":"var(\u002d\u002dtext-2)","borderTopColorHover":"var(\u002d\u002dcolor-background-hover)","borderRightColorHover":"var(\u002d\u002dcolor-background-hover)","borderBottomColorHover":"var(\u002d\u002dcolor-background-hover)","borderLeftColorHover":"var(\u002d\u002dcolor-background-hover)"},"textColor":"var(\u002d\u002dtext-2)","textColorHover":"var(\u002d\u002dcolor-background-hover)"} -->
+<span class="gb-button gb-button-1d63c924 gb-button-text">View More</span>
+<!-- /wp:generateblocks/button -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"be267f54","isGrid":true,"gridId":"6c001c90","isDynamic":true,"blockVersion":4,"sizing":{"width":"33.33%","widthMobile":"100%","widthTablet":"50%"},"borders":{"borderTopWidth":"2px","borderRightWidth":"2px","borderBottomWidth":"2px","borderLeftWidth":"2px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"var(\u002d\u002dcolor-background)","borderRightColor":"var(\u002d\u002dcolor-background)","borderBottomColor":"var(\u002d\u002dcolor-background)","borderLeftColor":"var(\u002d\u002dcolor-background)","borderTopColorHover":"var(\u002d\u002dcolor-background-hover)","borderRightColorHover":"var(\u002d\u002dcolor-background-hover)","borderBottomColorHover":"var(\u002d\u002dcolor-background-hover)","borderLeftColorHover":"var(\u002d\u002dcolor-background-hover)"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"2363388e","blockVersion":3,"typography":{"textAlign":"center","fontSize":"22px"},"spacing":{"marginBottom":"15px","paddingTop":"10px","paddingBottom":"10px","paddingLeft":"10px","paddingRight":"10px"},"backgroundColor":"var(\u002d\u002dcolor-background-hover)","textColor":"#ffffff"} -->
+<h2 class="gb-headline gb-headline-2363388e gb-headline-text">Category</h2>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/query-loop {"uniqueId":"192611e1","query":{"post_type":"post","per_page":"6"}} -->
+<!-- wp:generateblocks/grid {"uniqueId":"a9315330","columns":1,"verticalGap":5,"isDynamic":true,"blockVersion":3,"isQueryLoop":true,"lock":{"remove":true}} -->
+<!-- wp:generateblocks/container {"uniqueId":"10fb2e55","isGrid":true,"isQueryLoopItem":true,"gridId":"a9315330","isDynamic":true,"blockVersion":4,"sizing":{"width":"100%"},"spacing":{"marginLeft":"10px","marginRight":"10px"},"lock":{"remove":true,"move":true}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"f979b3a9","element":"p","blockVersion":3,"display":"flex","alignItems":"center","columnGap":"0.5em","typography":{"fontSize":"16px","fontWeight":""},"spacing":{"marginBottom":"0px"},"hasIcon":true,"iconStyles":{"height":"1.4em","width":"1.4em"},"useDynamicData":true,"dynamicContentType":"post-title","dynamicLinkType":"single-post"} -->
+<p class="gb-headline gb-headline-f979b3a9"><span class="gb-icon"><svg viewBox="0 0 16 16" class="bi bi-dot" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">   <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path> </svg></span><span class="gb-headline-text"></span></p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/query-loop -->
+
+<!-- wp:generateblocks/container {"uniqueId":"c0ddbf64","isDynamic":true,"blockVersion":4,"typography":{"textAlign":"right"},"spacing":{"marginRight":"15px","marginLeft":"15px","marginBottom":"15px","marginTop":"15px"}} -->
+<!-- wp:generateblocks/button {"uniqueId":"c47901ad","blockVersion":4,"display":"inline-flex","typography":{"fontWeight":"600","fontSize":"14px"},"spacing":{"paddingTop":"5px","paddingRight":"20px","paddingBottom":"5px","paddingLeft":"20px"},"borders":{"borderTopWidth":"2px","borderRightWidth":"2px","borderBottomWidth":"2px","borderLeftWidth":"2px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"var(\u002d\u002dtext-2)","borderRightColor":"var(\u002d\u002dtext-2)","borderBottomColor":"var(\u002d\u002dtext-2)","borderLeftColor":"var(\u002d\u002dtext-2)","borderTopColorHover":"var(\u002d\u002dcolor-background-hover)","borderRightColorHover":"var(\u002d\u002dcolor-background-hover)","borderBottomColorHover":"var(\u002d\u002dcolor-background-hover)","borderLeftColorHover":"var(\u002d\u002dcolor-background-hover)"},"textColor":"var(\u002d\u002dtext-2)","textColorHover":"var(\u002d\u002dcolor-background-hover)"} -->
+<span class="gb-button gb-button-c47901ad gb-button-text">View More</span>
+<!-- /wp:generateblocks/button -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"5b8618b1","isGrid":true,"gridId":"6c001c90","isDynamic":true,"blockVersion":4,"sizing":{"width":"33.33%","widthMobile":"100%","widthTablet":"50%"},"borders":{"borderTopWidth":"2px","borderRightWidth":"2px","borderBottomWidth":"2px","borderLeftWidth":"2px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"var(\u002d\u002dcolor-background)","borderRightColor":"var(\u002d\u002dcolor-background)","borderBottomColor":"var(\u002d\u002dcolor-background)","borderLeftColor":"var(\u002d\u002dcolor-background)","borderTopColorHover":"var(\u002d\u002dcolor-background-hover)","borderRightColorHover":"var(\u002d\u002dcolor-background-hover)","borderBottomColorHover":"var(\u002d\u002dcolor-background-hover)","borderLeftColorHover":"var(\u002d\u002dcolor-background-hover)"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"9b89e6b6","blockVersion":3,"typography":{"textAlign":"center","fontSize":"22px"},"spacing":{"marginBottom":"15px","paddingTop":"10px","paddingBottom":"10px","paddingLeft":"10px","paddingRight":"10px"},"backgroundColor":"var(\u002d\u002dcolor-background-hover)","textColor":"#ffffff"} -->
+<h2 class="gb-headline gb-headline-9b89e6b6 gb-headline-text">Category</h2>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/query-loop {"uniqueId":"d7782290","query":{"post_type":"post","per_page":"6"}} -->
+<!-- wp:generateblocks/grid {"uniqueId":"9b222bc7","columns":1,"verticalGap":5,"isDynamic":true,"blockVersion":3,"isQueryLoop":true,"lock":{"remove":true}} -->
+<!-- wp:generateblocks/container {"uniqueId":"9ce57fa2","isGrid":true,"isQueryLoopItem":true,"gridId":"9b222bc7","isDynamic":true,"blockVersion":4,"sizing":{"width":"100%"},"spacing":{"marginLeft":"10px","marginRight":"10px"},"lock":{"remove":true,"move":true}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"9023e2f3","element":"p","blockVersion":3,"display":"flex","alignItems":"center","columnGap":"0.5em","typography":{"fontSize":"16px","fontWeight":""},"spacing":{"marginBottom":"0px"},"hasIcon":true,"iconStyles":{"height":"1.4em","width":"1.4em"},"useDynamicData":true,"dynamicContentType":"post-title","dynamicLinkType":"single-post"} -->
+<p class="gb-headline gb-headline-9023e2f3"><span class="gb-icon"><svg viewBox="0 0 16 16" class="bi bi-dot" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">   <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path> </svg></span><span class="gb-headline-text"></span></p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/query-loop -->
+
+<!-- wp:generateblocks/container {"uniqueId":"381626ff","isDynamic":true,"blockVersion":4,"typography":{"textAlign":"right"},"spacing":{"marginRight":"15px","marginLeft":"15px","marginBottom":"15px","marginTop":"15px"}} -->
+<!-- wp:generateblocks/button {"uniqueId":"7240f996","blockVersion":4,"display":"inline-flex","typography":{"fontWeight":"600","fontSize":"14px"},"spacing":{"paddingTop":"5px","paddingRight":"20px","paddingBottom":"5px","paddingLeft":"20px"},"borders":{"borderTopWidth":"2px","borderRightWidth":"2px","borderBottomWidth":"2px","borderLeftWidth":"2px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"var(\u002d\u002dtext-2)","borderRightColor":"var(\u002d\u002dtext-2)","borderBottomColor":"var(\u002d\u002dtext-2)","borderLeftColor":"var(\u002d\u002dtext-2)","borderTopColorHover":"var(\u002d\u002dcolor-background-hover)","borderRightColorHover":"var(\u002d\u002dcolor-background-hover)","borderBottomColorHover":"var(\u002d\u002dcolor-background-hover)","borderLeftColorHover":"var(\u002d\u002dcolor-background-hover)"},"textColor":"var(\u002d\u002dtext-2)","textColorHover":"var(\u002d\u002dcolor-background-hover)"} -->
+<span class="gb-button gb-button-7240f996 gb-button-text">View More</span>
+<!-- /wp:generateblocks/button -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"33213bc4","isGrid":true,"gridId":"6c001c90","isDynamic":true,"blockVersion":4,"sizing":{"width":"33.33%","widthMobile":"100%","widthTablet":"50%"},"borders":{"borderTopWidth":"2px","borderRightWidth":"2px","borderBottomWidth":"2px","borderLeftWidth":"2px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"var(\u002d\u002dcolor-background)","borderRightColor":"var(\u002d\u002dcolor-background)","borderBottomColor":"var(\u002d\u002dcolor-background)","borderLeftColor":"var(\u002d\u002dcolor-background)","borderTopColorHover":"var(\u002d\u002dcolor-background-hover)","borderRightColorHover":"var(\u002d\u002dcolor-background-hover)","borderBottomColorHover":"var(\u002d\u002dcolor-background-hover)","borderLeftColorHover":"var(\u002d\u002dcolor-background-hover)"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"efb9db7c","blockVersion":3,"typography":{"textAlign":"center","fontSize":"22px"},"spacing":{"marginBottom":"15px","paddingTop":"10px","paddingBottom":"10px","paddingLeft":"10px","paddingRight":"10px"},"backgroundColor":"var(\u002d\u002dcolor-background-hover)","textColor":"#ffffff"} -->
+<h2 class="gb-headline gb-headline-efb9db7c gb-headline-text">Category</h2>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/query-loop {"uniqueId":"124dd038","query":{"post_type":"post","per_page":"6"}} -->
+<!-- wp:generateblocks/grid {"uniqueId":"c55b2e9f","columns":1,"verticalGap":5,"isDynamic":true,"blockVersion":3,"isQueryLoop":true,"lock":{"remove":true}} -->
+<!-- wp:generateblocks/container {"uniqueId":"05e0176e","isGrid":true,"isQueryLoopItem":true,"gridId":"c55b2e9f","isDynamic":true,"blockVersion":4,"sizing":{"width":"100%"},"spacing":{"marginLeft":"10px","marginRight":"10px"},"lock":{"remove":true,"move":true}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"e60c9e92","element":"p","blockVersion":3,"display":"flex","alignItems":"center","columnGap":"0.5em","typography":{"fontSize":"16px","fontWeight":""},"spacing":{"marginBottom":"0px"},"hasIcon":true,"iconStyles":{"height":"1.4em","width":"1.4em"},"useDynamicData":true,"dynamicContentType":"post-title","dynamicLinkType":"single-post"} -->
+<p class="gb-headline gb-headline-e60c9e92"><span class="gb-icon"><svg viewBox="0 0 16 16" class="bi bi-dot" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">   <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path> </svg></span><span class="gb-headline-text"></span></p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/query-loop -->
+
+<!-- wp:generateblocks/container {"uniqueId":"009aa6ca","isDynamic":true,"blockVersion":4,"typography":{"textAlign":"right"},"spacing":{"marginRight":"15px","marginLeft":"15px","marginBottom":"15px","marginTop":"15px"}} -->
+<!-- wp:generateblocks/button {"uniqueId":"4b80662f","blockVersion":4,"display":"inline-flex","typography":{"fontWeight":"600","fontSize":"14px"},"spacing":{"paddingTop":"5px","paddingRight":"20px","paddingBottom":"5px","paddingLeft":"20px"},"borders":{"borderTopWidth":"2px","borderRightWidth":"2px","borderBottomWidth":"2px","borderLeftWidth":"2px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"var(\u002d\u002dtext-2)","borderRightColor":"var(\u002d\u002dtext-2)","borderBottomColor":"var(\u002d\u002dtext-2)","borderLeftColor":"var(\u002d\u002dtext-2)","borderTopColorHover":"var(\u002d\u002dcolor-background-hover)","borderRightColorHover":"var(\u002d\u002dcolor-background-hover)","borderBottomColorHover":"var(\u002d\u002dcolor-background-hover)","borderLeftColorHover":"var(\u002d\u002dcolor-background-hover)"},"textColor":"var(\u002d\u002dtext-2)","textColorHover":"var(\u002d\u002dcolor-background-hover)"} -->
+<span class="gb-button gb-button-4b80662f gb-button-text">View More</span>
+<!-- /wp:generateblocks/button -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"63fe63e9","isDynamic":true,"blockVersion":4,"spacing":{"paddingTop":"30px","paddingBottom":"30px","paddingLeftTablet":"20px","paddingRightTablet":"20px"}} -->
+<!-- wp:generateblocks/container {"uniqueId":"d36ea20b","isDynamic":true,"blockVersion":4,"useGlobalMaxWidth":true,"spacing":{"marginRight":"auto","marginLeft":"auto"},"borders":{"borderTopWidth":"2px","borderRightWidth":"2px","borderBottomWidth":"2px","borderLeftWidth":"2px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"var(\u002d\u002dcolor-background)","borderRightColor":"var(\u002d\u002dcolor-background)","borderBottomColor":"var(\u002d\u002dcolor-background)","borderLeftColor":"var(\u002d\u002dcolor-background)"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"48c10f8c","blockVersion":3,"typography":{"textAlign":"center","fontSize":"24px"},"spacing":{"paddingTop":"8px","paddingBottom":"8px","paddingLeft":"10px","paddingRight":"10px"},"backgroundColor":"var(\u002d\u002dcolor-background-hover)","textColor":"#ffffff"} -->
+<h2 class="gb-headline gb-headline-48c10f8c gb-headline-text">Sarkari Result 2023</h2>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"15f631ab","element":"p","blockVersion":3,"typography":{"textAlign":"center","fontSize":"15px"},"spacing":{"paddingTop":"8px","paddingLeft":"10px","paddingRight":"10px","paddingBottom":"8px"}} -->
+<p class="gb-headline gb-headline-15f631ab gb-headline-text">Sarkari Result, the popular online platform dedicated to providing information on government job opportunities and exam results, continues to play a vital role in empowering job seekers in 2023. As the demand for secure and stable employment remains high, this article explores the significance of Sarkari Result in assisting aspirants and highlights the latest developments in government job recruitment. In a world characterized by economic uncertainties, government jobs continue to be highly sought after by millions of individuals. The stability, security, and attractive perks associated with such positions have made them an attractive career choice. In 2023, as the job market remains competitive, the demand for government jobs has only increased.</p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"a6cdec7f","isDynamic":true,"blockVersion":4,"spacing":{"paddingTop":"30px","paddingBottom":"30px","paddingLeftTablet":"20px","paddingRightTablet":"20px"}} -->
+<!-- wp:generateblocks/container {"uniqueId":"f3fecee6","isDynamic":true,"blockVersion":4,"useGlobalMaxWidth":true,"spacing":{"marginRight":"auto","marginLeft":"auto"},"borders":{"borderTopWidth":"2px","borderRightWidth":"2px","borderBottomWidth":"2px","borderLeftWidth":"2px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"var(\u002d\u002dcolor-background)","borderRightColor":"var(\u002d\u002dcolor-background)","borderBottomColor":"var(\u002d\u002dcolor-background)","borderLeftColor":"var(\u002d\u002dcolor-background)"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"7145c05e","blockVersion":3,"typography":{"textAlign":"center","fontSize":"24px"},"spacing":{"paddingTop":"8px","paddingBottom":"8px","paddingLeft":"10px","paddingRight":"10px"},"backgroundColor":"var(\u002d\u002dcolor-background-hover)","textColor":"#ffffff"} -->
+<h2 class="gb-headline gb-headline-7145c05e gb-headline-text">Why Should I Consider a Government Job?</h2>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"7464f0c4","element":"p","blockVersion":3,"typography":{"textAlign":"center","fontSize":"15px"},"spacing":{"paddingTop":"8px","paddingLeft":"10px","paddingRight":"10px","paddingBottom":"8px"}} -->
+<p class="gb-headline gb-headline-7464f0c4 gb-headline-text">Job Security and Stability: Government jobs are known for their stability and long-term security. Unlike many private sector positions that may be subject to economic fluctuations or company downsizing, government jobs provide a sense of stability, often with tenure and job protection. This security allows employees to plan for their future with confidence. Attractive Benefits and Perks: Government jobs often come with a comprehensive benefits package. These benefits can include healthcare coverage, retirement plans, paid leave, housing allowances, and other perks. Additionally, government jobs often offer regular salary increments and promotions based on performance and experience, providing financial security and growth opportunities. Work-Life Balance: Many government jobs prioritize work-life balance and offer fixed working hours, flexible schedules, and generous vacation and leave policies. This allows employees to maintain a healthy work-life integration, spend time with family and pursue personal interests outside of work.</p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"3ecc7cd7","isDynamic":true,"blockVersion":4,"spacing":{"paddingTop":"30px","paddingBottom":"30px","paddingLeftTablet":"20px","paddingRightTablet":"20px"}} -->
+<!-- wp:generateblocks/container {"uniqueId":"25868f94","isDynamic":true,"blockVersion":4,"useGlobalMaxWidth":true,"spacing":{"marginRight":"auto","marginLeft":"auto"},"borders":{"borderTopWidth":"2px","borderRightWidth":"2px","borderBottomWidth":"2px","borderLeftWidth":"2px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"var(\u002d\u002dcolor-background)","borderRightColor":"var(\u002d\u002dcolor-background)","borderBottomColor":"var(\u002d\u002dcolor-background)","borderLeftColor":"var(\u002d\u002dcolor-background)"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"8002fba2","blockVersion":3,"typography":{"textAlign":"center","fontSize":"24px"},"spacing":{"paddingTop":"8px","paddingBottom":"8px","paddingLeft":"10px","paddingRight":"10px"},"backgroundColor":"var(\u002d\u002dcolor-background-hover)","textColor":"#ffffff"} -->
+<h2 class="gb-headline gb-headline-8002fba2 gb-headline-text">What Kind of Government Jobs Can I Get?</h2>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"21b34c9d","element":"p","blockVersion":3,"typography":{"textAlign":"center","fontSize":"15px"},"spacing":{"paddingTop":"8px","paddingLeft":"10px","paddingRight":"10px","paddingBottom":"8px"}} -->
+<p class="gb-headline gb-headline-21b34c9d gb-headline-text">Civil Services: The Indian Administrative Service (IAS), Indian Police Service (IPS), and Indian Foreign Service (IFS) are prestigious civil service positions that involve administrative, law enforcement, and diplomatic roles respectively. These positions are filled through competitive examinations conducted by the Union Public Service Commission (UPSC). Banking and Finance: Government banks such as the State Bank of India (SBI) and Reserve Bank of India (RBI) offer positions for Probationary Officers (PO), Clerks, and Specialist Officers (SO). These jobs provide opportunities in areas like banking, finance, accounting, and economics.</p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
