@@ -1,0 +1,357 @@
+<!-- wp:html -->
+<style>
+/* ── Hero ── */
+.gpr-hero-section{background:linear-gradient(120deg,#0ea87a 0%,#13c9a0 40%,#17c9c9 70%,#1bafd6 100%);padding:55px 20px 52px;text-align:center}
+.gpr-hero-section h1{color:#fff!important;font-size:clamp(22px,3.5vw,36px);font-weight:800;margin:0 0 22px;text-shadow:0 2px 10px rgba(0,0,0,.2);letter-spacing:-.3px}
+.gpr-searchbox{display:flex;max-width:580px;margin:0 auto;background:#fff;border-radius:50px;overflow:hidden;box-shadow:0 6px 28px rgba(0,0,0,.18)}
+.gpr-searchbox input{flex:1;border:none;outline:none;padding:14px 22px;font-size:15px;color:#333;background:transparent}
+.gpr-searchbox button{background:#111;border:none;padding:0 22px;cursor:pointer;border-radius:0 50px 50px 0;min-width:52px;display:flex;align-items:center;justify-content:center}
+/* ── Quick Links wrapper ── */
+.gpr-ql-outer{max-width:1160px;margin:-16px auto 0;padding:0 16px}
+.gpr-ql-box{background:#fff;border-radius:14px;box-shadow:0 6px 32px rgba(0,0,0,.11);padding:16px}
+/* ── Marquee ── */
+.gpr-mq-outer{max-width:1160px;margin:18px auto 0;padding:0 16px}
+.gpr-mq-box{display:flex;align-items:center;gap:10px;background:#fff8f2;border:1.5px solid #ffd5a8;border-radius:8px;padding:9px 14px;overflow:hidden}
+.gpr-mq-label{background:#f97316;color:#fff;font-size:11.5px;font-weight:800;padding:4px 12px;border-radius:4px;white-space:nowrap;flex-shrink:0}
+.gpr-mq-box marquee a{color:#0a7c59;font-weight:600;font-size:13.5px;margin:0 6px;text-decoration:none}
+.gpr-mq-box marquee a:hover{color:#f97316}
+/* ── Icons row ── */
+.gpr-icons-outer{max-width:1160px;margin:20px auto 0;padding:0 16px}
+.gpr-icons-box{background:#fff;border-radius:10px;box-shadow:0 2px 14px rgba(0,0,0,.07);padding:18px 10px;display:flex;flex-wrap:wrap;justify-content:space-around;gap:12px}
+.gpr-icon-item{display:flex;flex-direction:column;align-items:center;gap:7px;text-decoration:none!important;color:#222!important;font-size:12.5px;font-weight:700;min-width:70px;text-align:center;transition:color .18s}
+.gpr-icon-item:hover{color:#0a9e72!important}
+.gpr-icon-item img{width:50px;height:50px;object-fit:contain}
+/* ── Category box header fix ── */
+.gpr-box-header-fix{background:#0a9e72!important;color:#fff!important;text-align:center;padding:13px 10px;font-size:18px;font-weight:800;letter-spacing:.2px;border-radius:0}
+/* ── View More btn ── */
+.gpr-vm-btn{display:inline-flex;align-items:center;gap:5px;background:#0a9e72;color:#fff!important;padding:9px 32px;border-radius:6px;font-size:14px;font-weight:700;text-decoration:none!important;transition:background .18s}
+.gpr-vm-btn:hover{background:#077a57!important;color:#fff!important}
+/* ── Social buttons ── */
+.gpr-wa-btn{background:#25d366!important;color:#fff!important;text-decoration:none!important;display:flex;align-items:center;justify-content:center;gap:9px;padding:14px 18px;border-radius:8px;font-size:15px;font-weight:700;width:100%;transition:opacity .18s}
+.gpr-yt-btn{background:#ff0000!important;color:#fff!important;text-decoration:none!important;display:flex;align-items:center;justify-content:center;gap:9px;padding:14px 18px;border-radius:8px;font-size:15px;font-weight:700;width:100%;transition:opacity .18s}
+.gpr-tg-btn{background:#0088cc!important;color:#fff!important;text-decoration:none!important;display:flex;align-items:center;justify-content:center;gap:9px;padding:14px 18px;border-radius:8px;font-size:15px;font-weight:700;width:100%;transition:opacity .18s}
+.gpr-wa-btn:hover,.gpr-yt-btn:hover,.gpr-tg-btn:hover{opacity:.88;color:#fff!important}
+/* ── Post list meta ── */
+.gpr-meta-row{display:flex;flex-wrap:wrap;gap:12px;font-size:11.5px;color:#888;margin-top:3px}
+.gpr-s-new{color:#0a9e72;font-weight:700}
+.gpr-s-upd{color:#f97316;font-weight:700}
+.gpr-s-ext{color:#e53935;font-weight:700}
+</style>
+<!-- /wp:html -->
+
+<!-- SECTION 1: HERO BANNER ════════════════════════════════════ -->
+<!-- wp:html -->
+<div class="gpr-hero-section">
+  <h1>No #1 Platform For Job Updates</h1>
+  <div class="gpr-searchbox">
+    <input type="text" placeholder="Search jobs, results, admit cards..." />
+    <button aria-label="Search">
+      <svg width="20" height="20" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="6"/><line x1="16.5" y1="16.5" x2="22" y2="22"/>
+      </svg>
+    </button>
+  </div>
+</div>
+<!-- /wp:html -->
+
+<!-- SECTION 2: QUICK LINKS (8 colorful job cards) ════════════ -->
+<!-- wp:generateblocks/container {"uniqueId":"ql-outer-01","isDynamic":true,"blockVersion":4,"spacing":{"paddingTop":"0px","paddingBottom":"0px","marginTop":"-16px","paddingLeftTablet":"16px","paddingRightTablet":"16px"}} -->
+<!-- wp:generateblocks/container {"uniqueId":"ql-inner-01","isDynamic":true,"blockVersion":4,"useGlobalMaxWidth":true,"backgroundColor":"#ffffff","spacing":{"marginRight":"auto","marginLeft":"auto","paddingTop":"16px","paddingRight":"16px","paddingBottom":"16px","paddingLeft":"16px"},"borders":{"borderTopLeftRadius":"14px","borderTopRightRadius":"14px","borderBottomLeftRadius":"14px","borderBottomRightRadius":"14px"},"boxShadow":"0 6px 32px rgba(0,0,0,0.11)"} -->
+
+<!-- wp:generateblocks/grid {"uniqueId":"ql-grid-01","columns":8,"horizontalGap":10,"verticalGap":10,"horizontalGapMobile":8,"verticalGapMobile":8,"isDynamic":true,"blockVersion":3} -->
+
+<!-- wp:generateblocks/container {"uniqueId":"ql-c1","isGrid":true,"gridId":"ql-grid-01","backgroundColor":"#5d8a0f","textColor":"#ffffff","isDynamic":true,"blockVersion":4,"sizing":{"width":"25%","widthMobile":"50%","widthTablet":"25%"},"spacing":{"paddingTop":"18px","paddingBottom":"18px","paddingLeft":"10px","paddingRight":"10px"},"borders":{"borderTopLeftRadius":"8px","borderTopRightRadius":"8px","borderBottomLeftRadius":"8px","borderBottomRightRadius":"8px"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"ql-h1","blockVersion":3,"typography":{"fontSize":"13.5px","textAlign":"center","fontWeight":"700"},"spacing":{"marginBottom":"0px"},"textColor":"#ffffff","linkColor":"#ffffff","linkColorHover":"#f0f0f0"} -->
+<h2 class="gb-headline gb-headline-ql-h1 gb-headline-text"><a href="#">UPSC EPFO Recruitment 2023 Apply Online</a></h2>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"ql-c2","isGrid":true,"gridId":"ql-grid-01","backgroundColor":"#1565c0","textColor":"#ffffff","isDynamic":true,"blockVersion":4,"sizing":{"width":"25%","widthMobile":"50%","widthTablet":"25%"},"spacing":{"paddingTop":"18px","paddingBottom":"18px","paddingLeft":"10px","paddingRight":"10px"},"borders":{"borderTopLeftRadius":"8px","borderTopRightRadius":"8px","borderBottomLeftRadius":"8px","borderBottomRightRadius":"8px"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"ql-h2","blockVersion":3,"typography":{"fontSize":"13.5px","textAlign":"center","fontWeight":"700"},"spacing":{"marginBottom":"0px"},"textColor":"#ffffff","linkColor":"#ffffff","linkColorHover":"#f0f0f0"} -->
+<h2 class="gb-headline gb-headline-ql-h2 gb-headline-text"><a href="#">IDBI Bank Assistant Manager Recruitment 2023</a></h2>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"ql-c3","isGrid":true,"gridId":"ql-grid-01","backgroundColor":"#e65c00","textColor":"#ffffff","isDynamic":true,"blockVersion":4,"sizing":{"width":"25%","widthMobile":"50%","widthTablet":"25%"},"spacing":{"paddingTop":"18px","paddingBottom":"18px","paddingLeft":"10px","paddingRight":"10px"},"borders":{"borderTopLeftRadius":"8px","borderTopRightRadius":"8px","borderBottomLeftRadius":"8px","borderBottomRightRadius":"8px"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"ql-h3","blockVersion":3,"typography":{"fontSize":"13.5px","textAlign":"center","fontWeight":"700"},"spacing":{"marginBottom":"0px"},"textColor":"#ffffff","linkColor":"#ffffff","linkColorHover":"#f0f0f0"} -->
+<h2 class="gb-headline gb-headline-ql-h3 gb-headline-text"><a href="#">Haryana HPSC Civil Services Recruitment 2023</a></h2>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"ql-c4","isGrid":true,"gridId":"ql-grid-01","backgroundColor":"#b71c1c","textColor":"#ffffff","isDynamic":true,"blockVersion":4,"sizing":{"width":"25%","widthMobile":"50%","widthTablet":"25%"},"spacing":{"paddingTop":"18px","paddingBottom":"18px","paddingLeft":"10px","paddingRight":"10px"},"borders":{"borderTopLeftRadius":"8px","borderTopRightRadius":"8px","borderBottomLeftRadius":"8px","borderBottomRightRadius":"8px"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"ql-h4","blockVersion":3,"typography":{"fontSize":"13.5px","textAlign":"center","fontWeight":"700"},"spacing":{"marginBottom":"0px"},"textColor":"#ffffff","linkColor":"#ffffff","linkColorHover":"#f0f0f0"} -->
+<h2 class="gb-headline gb-headline-ql-h4 gb-headline-text"><a href="#">Assam Rifles Technical Recruitment 2023</a></h2>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"ql-c5","isGrid":true,"gridId":"ql-grid-01","backgroundColor":"#e53935","textColor":"#ffffff","isDynamic":true,"blockVersion":4,"sizing":{"width":"25%","widthMobile":"50%","widthTablet":"25%"},"spacing":{"paddingTop":"18px","paddingBottom":"18px","paddingLeft":"10px","paddingRight":"10px"},"borders":{"borderTopLeftRadius":"8px","borderTopRightRadius":"8px","borderBottomLeftRadius":"8px","borderBottomRightRadius":"8px"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"ql-h5","blockVersion":3,"typography":{"fontSize":"13.5px","textAlign":"center","fontWeight":"700"},"spacing":{"marginBottom":"0px"},"textColor":"#ffffff","linkColor":"#ffffff","linkColorHover":"#f0f0f0"} -->
+<h2 class="gb-headline gb-headline-ql-h5 gb-headline-text"><a href="#">Bihar CET B.Ed Admission Application Form</a></h2>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"ql-c6","isGrid":true,"gridId":"ql-grid-01","backgroundColor":"#0a9e72","textColor":"#ffffff","isDynamic":true,"blockVersion":4,"sizing":{"width":"25%","widthMobile":"50%","widthTablet":"25%"},"spacing":{"paddingTop":"18px","paddingBottom":"18px","paddingLeft":"10px","paddingRight":"10px"},"borders":{"borderTopLeftRadius":"8px","borderTopRightRadius":"8px","borderBottomLeftRadius":"8px","borderBottomRightRadius":"8px"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"ql-h6","blockVersion":3,"typography":{"fontSize":"13.5px","textAlign":"center","fontWeight":"700"},"spacing":{"marginBottom":"0px"},"textColor":"#ffffff","linkColor":"#ffffff","linkColorHover":"#f0f0f0"} -->
+<h2 class="gb-headline gb-headline-ql-h6 gb-headline-text"><a href="#">UP B.Ed JEE Admission Application Form</a></h2>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"ql-c7","isGrid":true,"gridId":"ql-grid-01","backgroundColor":"#0288d1","textColor":"#ffffff","isDynamic":true,"blockVersion":4,"sizing":{"width":"25%","widthMobile":"50%","widthTablet":"25%"},"spacing":{"paddingTop":"18px","paddingBottom":"18px","paddingLeft":"10px","paddingRight":"10px"},"borders":{"borderTopLeftRadius":"8px","borderTopRightRadius":"8px","borderBottomLeftRadius":"8px","borderBottomRightRadius":"8px"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"ql-h7","blockVersion":3,"typography":{"fontSize":"13.5px","textAlign":"center","fontWeight":"700"},"spacing":{"marginBottom":"0px"},"textColor":"#ffffff","linkColor":"#ffffff","linkColorHover":"#f0f0f0"} -->
+<h2 class="gb-headline gb-headline-ql-h7 gb-headline-text"><a href="#">Bihar DElEd Admission Online Application</a></h2>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"ql-c8","isGrid":true,"gridId":"ql-grid-01","backgroundColor":"#d81b8e","textColor":"#ffffff","isDynamic":true,"blockVersion":4,"sizing":{"width":"25%","widthMobile":"50%","widthTablet":"25%"},"spacing":{"paddingTop":"18px","paddingBottom":"18px","paddingLeft":"10px","paddingRight":"10px"},"borders":{"borderTopLeftRadius":"8px","borderTopRightRadius":"8px","borderBottomLeftRadius":"8px","borderBottomRightRadius":"8px"}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"ql-h8","blockVersion":3,"typography":{"fontSize":"13.5px","textAlign":"center","fontWeight":"700"},"spacing":{"marginBottom":"0px"},"textColor":"#ffffff","linkColor":"#ffffff","linkColorHover":"#f0f0f0"} -->
+<h2 class="gb-headline gb-headline-ql-h8 gb-headline-text"><a href="#">Army Religious Teacher Online Form 2023</a></h2>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- SECTION 3: MARQUEE ════════════════════════════════════════ -->
+<!-- wp:generateblocks/container {"uniqueId":"mq-outer-01","isDynamic":true,"blockVersion":4,"spacing":{"paddingTop":"18px","paddingBottom":"0px","paddingLeftTablet":"16px","paddingRightTablet":"16px"}} -->
+<!-- wp:generateblocks/container {"uniqueId":"mq-inner-01","isDynamic":true,"blockVersion":4,"useGlobalMaxWidth":true,"spacing":{"marginRight":"auto","marginLeft":"auto"}} -->
+<!-- wp:html -->
+<div class="gpr-mq-box">
+  <span class="gpr-mq-label">🔔 Live</span>
+  <marquee behavior="scroll" direction="left" scrollamount="4" onmouseover="this.stop();" onmouseout="this.start();">
+    <a href="#">Bihar CET B.Ed Admission Application</a> •
+    <a href="#">CUET UG Admission Application Form</a> •
+    <a href="#">Bihar DElEd Admission Online</a> •
+    <a href="#">MP ESB High School TET Admit Card</a> •
+    <a href="#">Rajasthan High Court Clerk Admit Card</a> •
+    <a href="#">KVS Teaching &amp; Non-Teaching Admit Card</a> •
+    <a href="#">BSF Constable Tradesman Online Form</a> •
+    <a href="#">Delhi DSSSB Various Post Online Form</a> •
+    <a href="#">Haryana TGT Teacher Online Form</a>
+  </marquee>
+</div>
+<!-- /wp:html -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- SECTION 4: SOCIAL BUTTONS ════════════════════════════════ -->
+<!-- wp:generateblocks/container {"uniqueId":"sc-outer-01","isDynamic":true,"blockVersion":4,"spacing":{"paddingTop":"20px","paddingBottom":"0px","paddingLeftTablet":"16px","paddingRightTablet":"16px"}} -->
+<!-- wp:generateblocks/container {"uniqueId":"sc-inner-01","isDynamic":true,"blockVersion":4,"useGlobalMaxWidth":true,"spacing":{"marginRight":"auto","marginLeft":"auto"}} -->
+<!-- wp:generateblocks/grid {"uniqueId":"sc-grid-01","columns":3,"horizontalGap":12,"verticalGap":12,"isDynamic":true,"blockVersion":3} -->
+
+<!-- wp:generateblocks/container {"uniqueId":"sc-wa","isGrid":true,"gridId":"sc-grid-01","isDynamic":true,"blockVersion":4,"sizing":{"width":"33.33%","widthMobile":"100%","widthTablet":"33.33%"}} -->
+<!-- wp:html -->
+<a href="#" class="gpr-wa-btn">
+  <svg width="22" height="22" viewBox="0 0 32 32" fill="white"><path d="M16 1C7.73 1 1 7.73 1 16c0 2.67.67 5.18 1.87 7.37L1 31l7.87-1.84A14.93 14.93 0 0 0 16 31c8.27 0 15-6.73 15-15S24.27 1 16 1zm6.65 20.93c-.37-.18-2.17-1.07-2.51-1.19-.33-.12-.57-.18-.82.18s-.93 1.19-1.15 1.44-.43.27-.79.09a9.96 9.96 0 0 1-2.93-1.81 10.97 10.97 0 0 1-2.03-2.52c-.21-.37 0-.56.16-.74.16-.17.37-.43.55-.65.18-.22.24-.37.37-.61.12-.24.06-.46-.03-.64-.09-.18-.82-1.97-1.12-2.7-.29-.71-.59-.61-.82-.62h-.7c-.24 0-.64.09-.97.46-.33.37-1.27 1.24-1.27 3.02s1.3 3.5 1.48 3.74c.18.24 2.55 3.9 6.18 5.47.86.37 1.54.59 2.06.76.87.27 1.66.23 2.28.14.7-.1 2.17-.89 2.47-1.74.31-.85.31-1.58.22-1.74-.1-.16-.34-.24-.71-.42z"/></svg>
+  Join WhatsApp
+</a>
+<!-- /wp:html -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"sc-yt","isGrid":true,"gridId":"sc-grid-01","isDynamic":true,"blockVersion":4,"sizing":{"width":"33.33%","widthMobile":"100%","widthTablet":"33.33%"}} -->
+<!-- wp:html -->
+<a href="#" class="gpr-yt-btn">
+  <svg width="24" height="18" viewBox="0 0 24 18" fill="white"><path d="M23.5 2.8A3 3 0 0 0 21.4.7C19.5.2 12 .2 12 .2S4.5.2 2.6.7A3 3 0 0 0 .5 2.8C0 4.7 0 8.7 0 8.7s0 4 .5 5.9a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.9.5-5.9s0-4-.5-5.9zM9.6 12.5V5l6.3 3.7-6.3 3.8z"/></svg>
+  Join Youtube
+</a>
+<!-- /wp:html -->
+<!-- /wp:generateblocks/container -->
+
+<!-- wp:generateblocks/container {"uniqueId":"sc-tg","isGrid":true,"gridId":"sc-grid-01","isDynamic":true,"blockVersion":4,"sizing":{"width":"33.33%","widthMobile":"100%","widthTablet":"33.33%"}} -->
+<!-- wp:html -->
+<a href="#" class="gpr-tg-btn">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.94 8.19-1.97 9.28c-.14.63-.52.78-1.05.49l-2.9-2.14-1.4 1.35c-.15.15-.28.28-.58.28l.21-2.95 5.34-4.82c.23-.21-.05-.32-.36-.11L6.38 14.4l-2.86-.9c-.62-.19-.63-.62.13-.92l11.17-4.31c.52-.19.97.12.8.92h.32z"/></svg>
+  Join Telegram
+</a>
+<!-- /wp:html -->
+<!-- /wp:generateblocks/container -->
+
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- SECTION 5: CATEGORY ICONS ════════════════════════════════ -->
+<!-- wp:generateblocks/container {"uniqueId":"ci-outer-01","isDynamic":true,"blockVersion":4,"spacing":{"paddingTop":"20px","paddingBottom":"0px","paddingLeftTablet":"16px","paddingRightTablet":"16px"}} -->
+<!-- wp:generateblocks/container {"uniqueId":"ci-inner-01","isDynamic":true,"blockVersion":4,"useGlobalMaxWidth":true,"backgroundColor":"#ffffff","spacing":{"marginRight":"auto","marginLeft":"auto","paddingTop":"18px","paddingRight":"10px","paddingBottom":"18px","paddingLeft":"10px"},"borders":{"borderTopLeftRadius":"10px","borderTopRightRadius":"10px","borderBottomLeftRadius":"10px","borderBottomRightRadius":"10px"},"boxShadow":"0 2px 14px rgba(0,0,0,0.07)"} -->
+<!-- wp:html -->
+<div class="gpr-icons-box" style="box-shadow:none;padding:0;border-radius:0">
+  <a href="#" class="gpr-icon-item"><img src="https://img.icons8.com/color/96/school.png" alt="Education"/><span>Education</span></a>
+  <a href="#" class="gpr-icon-item"><img src="https://img.icons8.com/color/96/bank-building.png" alt="Bank Jobs"/><span>Bank Jobs</span></a>
+  <a href="#" class="gpr-icon-item"><img src="https://img.icons8.com/color/96/policeman-male--v1.png" alt="Police Jobs"/><span>Police Jobs</span></a>
+  <a href="#" class="gpr-icon-item"><img src="https://img.icons8.com/color/96/defending.png" alt="Defense Jobs"/><span>Defense Jobs</span></a>
+  <a href="#" class="gpr-icon-item"><img src="https://img.icons8.com/color/96/application-form.png" alt="Online Form"/><span>Online Form</span></a>
+  <a href="#" class="gpr-icon-item"><img src="https://img.icons8.com/color/96/find-matching-job.png" alt="Latest Jobs"/><span>Latest Jobs</span></a>
+  <a href="#" class="gpr-icon-item"><img src="https://img.icons8.com/color/96/train.png" alt="Railway Jobs"/><span>Railway Jobs</span></a>
+  <a href="#" class="gpr-icon-item"><img src="https://img.icons8.com/color/96/teacher.png" alt="Teaching Jobs"/><span>Teaching Jobs</span></a>
+</div>
+<!-- /wp:html -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- SECTION 6: CATEGORY POST SECTIONS (6 boxes) ═════════════ -->
+<!-- wp:generateblocks/container {"uniqueId":"227c5092","isDynamic":true,"blockVersion":4,"spacing":{"paddingTop":"24px","paddingBottom":"30px","paddingLeftTablet":"16px","paddingRightTablet":"16px"}} -->
+<!-- wp:generateblocks/container {"uniqueId":"c4f23dc1","isDynamic":true,"blockVersion":4,"useGlobalMaxWidth":true,"spacing":{"marginRight":"auto","marginLeft":"auto"}} -->
+<!-- wp:generateblocks/grid {"uniqueId":"6c001c90","columns":6,"horizontalGap":22,"verticalGap":22,"isDynamic":true,"blockVersion":3} -->
+
+<!-- ── BOX 1 ── -->
+<!-- wp:generateblocks/container {"uniqueId":"8b583b48","isGrid":true,"gridId":"6c001c90","isDynamic":true,"blockVersion":4,"sizing":{"width":"33.33%","widthMobile":"100%","widthTablet":"50%"},"borders":{"borderTopWidth":"1.5px","borderRightWidth":"1.5px","borderBottomWidth":"1.5px","borderLeftWidth":"1.5px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"#d6ede5","borderRightColor":"#d6ede5","borderBottomColor":"#d6ede5","borderLeftColor":"#d6ede5","borderTopLeftRadius":"10px","borderTopRightRadius":"10px","borderBottomLeftRadius":"10px","borderBottomRightRadius":"10px"},"boxShadow":"0 3px 14px rgba(10,158,114,0.08)"} -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"c750eeb2","blockVersion":3,"typography":{"textAlign":"center","fontSize":"19px","fontWeight":"800"},"spacing":{"marginBottom":"0px","paddingTop":"13px","paddingBottom":"13px","paddingLeft":"10px","paddingRight":"10px"},"backgroundColor":"#0a9e72","textColor":"#ffffff"} -->
+<h2 class="gb-headline gb-headline-c750eeb2 gb-headline-text">Bank Job</h2>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/query-loop {"uniqueId":"6346672e","query":{"post_type":"post","per_page":"6"}} -->
+<!-- wp:generateblocks/grid {"uniqueId":"8f609f0c","columns":1,"verticalGap":5,"isDynamic":true,"blockVersion":3,"isQueryLoop":true,"lock":{"remove":true}} -->
+<!-- wp:generateblocks/container {"uniqueId":"b869fccd","isGrid":true,"isQueryLoopItem":true,"gridId":"8f609f0c","isDynamic":true,"blockVersion":4,"sizing":{"width":"100%"},"spacing":{"paddingTop":"10px","paddingBottom":"8px","paddingLeft":"14px","paddingRight":"14px","marginBottom":"0px"},"borders":{"borderBottomWidth":"1px","borderBottomStyle":"solid","borderBottomColor":"#f0f5f2"},"lock":{"remove":true,"move":true}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"3c5ef255","element":"p","blockVersion":3,"typography":{"fontSize":"14px","fontWeight":"600"},"spacing":{"marginBottom":"3px"},"linkColor":"#1a1a1a","linkColorHover":"#0a9e72","useDynamicData":true,"dynamicContentType":"post-title","dynamicLinkType":"single-post"} -->
+<p class="gb-headline gb-headline-3c5ef255 gb-headline-text"></p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/query-loop -->
+
+<!-- wp:generateblocks/container {"uniqueId":"vm-box1","isDynamic":true,"blockVersion":4,"typography":{"textAlign":"center"},"spacing":{"paddingTop":"12px","paddingBottom":"12px","paddingLeft":"14px","paddingRight":"14px"},"borders":{"borderTopWidth":"1.5px","borderTopStyle":"solid","borderTopColor":"#e8f5ef"}} -->
+<!-- wp:generateblocks/button {"uniqueId":"vm-btn1","blockVersion":4,"display":"inline-flex","alignItems":"center","typography":{"fontWeight":"700","fontSize":"14px"},"spacing":{"paddingTop":"9px","paddingRight":"32px","paddingBottom":"9px","paddingLeft":"32px"},"borders":{"borderTopLeftRadius":"6px","borderTopRightRadius":"6px","borderBottomLeftRadius":"6px","borderBottomRightRadius":"6px"},"backgroundColor":"#0a9e72","backgroundColorHover":"#077a57","textColor":"#ffffff","textColorHover":"#ffffff"} -->
+<span class="gb-button gb-button-vm-btn1 gb-button-text">View More ›</span>
+<!-- /wp:generateblocks/button -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- ── BOX 2 ── -->
+<!-- wp:generateblocks/container {"uniqueId":"c7ff4458","isGrid":true,"gridId":"6c001c90","isDynamic":true,"blockVersion":4,"sizing":{"width":"33.33%","widthMobile":"100%","widthTablet":"50%"},"borders":{"borderTopWidth":"1.5px","borderRightWidth":"1.5px","borderBottomWidth":"1.5px","borderLeftWidth":"1.5px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"#d6ede5","borderRightColor":"#d6ede5","borderBottomColor":"#d6ede5","borderLeftColor":"#d6ede5","borderTopLeftRadius":"10px","borderTopRightRadius":"10px","borderBottomLeftRadius":"10px","borderBottomRightRadius":"10px"},"boxShadow":"0 3px 14px rgba(10,158,114,0.08)"} -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"1d3727c2","blockVersion":3,"typography":{"textAlign":"center","fontSize":"19px","fontWeight":"800"},"spacing":{"marginBottom":"0px","paddingTop":"13px","paddingBottom":"13px","paddingLeft":"10px","paddingRight":"10px"},"backgroundColor":"#0a9e72","textColor":"#ffffff"} -->
+<h2 class="gb-headline gb-headline-1d3727c2 gb-headline-text">Railway</h2>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/query-loop {"uniqueId":"31569917","query":{"post_type":"post","per_page":"6"}} -->
+<!-- wp:generateblocks/grid {"uniqueId":"039031f5","columns":1,"verticalGap":5,"isDynamic":true,"blockVersion":3,"isQueryLoop":true,"lock":{"remove":true}} -->
+<!-- wp:generateblocks/container {"uniqueId":"18679345","isGrid":true,"isQueryLoopItem":true,"gridId":"039031f5","isDynamic":true,"blockVersion":4,"sizing":{"width":"100%"},"spacing":{"paddingTop":"10px","paddingBottom":"8px","paddingLeft":"14px","paddingRight":"14px","marginBottom":"0px"},"borders":{"borderBottomWidth":"1px","borderBottomStyle":"solid","borderBottomColor":"#f0f5f2"},"lock":{"remove":true,"move":true}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"e4eb5523","element":"p","blockVersion":3,"typography":{"fontSize":"14px","fontWeight":"600"},"spacing":{"marginBottom":"3px"},"linkColor":"#1a1a1a","linkColorHover":"#0a9e72","useDynamicData":true,"dynamicContentType":"post-title","dynamicLinkType":"single-post"} -->
+<p class="gb-headline gb-headline-e4eb5523 gb-headline-text"></p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/query-loop -->
+
+<!-- wp:generateblocks/container {"uniqueId":"vm-box2","isDynamic":true,"blockVersion":4,"typography":{"textAlign":"center"},"spacing":{"paddingTop":"12px","paddingBottom":"12px","paddingLeft":"14px","paddingRight":"14px"},"borders":{"borderTopWidth":"1.5px","borderTopStyle":"solid","borderTopColor":"#e8f5ef"}} -->
+<!-- wp:generateblocks/button {"uniqueId":"vm-btn2","blockVersion":4,"display":"inline-flex","alignItems":"center","typography":{"fontWeight":"700","fontSize":"14px"},"spacing":{"paddingTop":"9px","paddingRight":"32px","paddingBottom":"9px","paddingLeft":"32px"},"borders":{"borderTopLeftRadius":"6px","borderTopRightRadius":"6px","borderBottomLeftRadius":"6px","borderBottomRightRadius":"6px"},"backgroundColor":"#0a9e72","backgroundColorHover":"#077a57","textColor":"#ffffff","textColorHover":"#ffffff"} -->
+<span class="gb-button gb-button-vm-btn2 gb-button-text">View More ›</span>
+<!-- /wp:generateblocks/button -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- ── BOX 3 ── -->
+<!-- wp:generateblocks/container {"uniqueId":"2081500d","isGrid":true,"gridId":"6c001c90","isDynamic":true,"blockVersion":4,"sizing":{"width":"33.33%","widthMobile":"100%","widthTablet":"50%"},"borders":{"borderTopWidth":"1.5px","borderRightWidth":"1.5px","borderBottomWidth":"1.5px","borderLeftWidth":"1.5px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"#d6ede5","borderRightColor":"#d6ede5","borderBottomColor":"#d6ede5","borderLeftColor":"#d6ede5","borderTopLeftRadius":"10px","borderTopRightRadius":"10px","borderBottomLeftRadius":"10px","borderBottomRightRadius":"10px"},"boxShadow":"0 3px 14px rgba(10,158,114,0.08)"} -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"8089ea08","blockVersion":3,"typography":{"textAlign":"center","fontSize":"19px","fontWeight":"800"},"spacing":{"marginBottom":"0px","paddingTop":"13px","paddingBottom":"13px","paddingLeft":"10px","paddingRight":"10px"},"backgroundColor":"#0a9e72","textColor":"#ffffff"} -->
+<h2 class="gb-headline gb-headline-8089ea08 gb-headline-text">Police Job</h2>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/query-loop {"uniqueId":"733af440","query":{"post_type":"post","per_page":"6"}} -->
+<!-- wp:generateblocks/grid {"uniqueId":"dbb57515","columns":1,"verticalGap":5,"isDynamic":true,"blockVersion":3,"isQueryLoop":true,"lock":{"remove":true}} -->
+<!-- wp:generateblocks/container {"uniqueId":"f4557e90","isGrid":true,"isQueryLoopItem":true,"gridId":"dbb57515","isDynamic":true,"blockVersion":4,"sizing":{"width":"100%"},"spacing":{"paddingTop":"10px","paddingBottom":"8px","paddingLeft":"14px","paddingRight":"14px","marginBottom":"0px"},"borders":{"borderBottomWidth":"1px","borderBottomStyle":"solid","borderBottomColor":"#f0f5f2"},"lock":{"remove":true,"move":true}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"d5ed4fa1","element":"p","blockVersion":3,"typography":{"fontSize":"14px","fontWeight":"600"},"spacing":{"marginBottom":"3px"},"linkColor":"#1a1a1a","linkColorHover":"#0a9e72","useDynamicData":true,"dynamicContentType":"post-title","dynamicLinkType":"single-post"} -->
+<p class="gb-headline gb-headline-d5ed4fa1 gb-headline-text"></p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/query-loop -->
+
+<!-- wp:generateblocks/container {"uniqueId":"vm-box3","isDynamic":true,"blockVersion":4,"typography":{"textAlign":"center"},"spacing":{"paddingTop":"12px","paddingBottom":"12px","paddingLeft":"14px","paddingRight":"14px"},"borders":{"borderTopWidth":"1.5px","borderTopStyle":"solid","borderTopColor":"#e8f5ef"}} -->
+<!-- wp:generateblocks/button {"uniqueId":"vm-btn3","blockVersion":4,"display":"inline-flex","alignItems":"center","typography":{"fontWeight":"700","fontSize":"14px"},"spacing":{"paddingTop":"9px","paddingRight":"32px","paddingBottom":"9px","paddingLeft":"32px"},"borders":{"borderTopLeftRadius":"6px","borderTopRightRadius":"6px","borderBottomLeftRadius":"6px","borderBottomRightRadius":"6px"},"backgroundColor":"#0a9e72","backgroundColorHover":"#077a57","textColor":"#ffffff","textColorHover":"#ffffff"} -->
+<span class="gb-button gb-button-vm-btn3 gb-button-text">View More ›</span>
+<!-- /wp:generateblocks/button -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- ── BOX 4 ── -->
+<!-- wp:generateblocks/container {"uniqueId":"be267f54","isGrid":true,"gridId":"6c001c90","isDynamic":true,"blockVersion":4,"sizing":{"width":"33.33%","widthMobile":"100%","widthTablet":"50%"},"borders":{"borderTopWidth":"1.5px","borderRightWidth":"1.5px","borderBottomWidth":"1.5px","borderLeftWidth":"1.5px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"#d6ede5","borderRightColor":"#d6ede5","borderBottomColor":"#d6ede5","borderLeftColor":"#d6ede5","borderTopLeftRadius":"10px","borderTopRightRadius":"10px","borderBottomLeftRadius":"10px","borderBottomRightRadius":"10px"},"boxShadow":"0 3px 14px rgba(10,158,114,0.08)"} -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"2363388e","blockVersion":3,"typography":{"textAlign":"center","fontSize":"19px","fontWeight":"800"},"spacing":{"marginBottom":"0px","paddingTop":"13px","paddingBottom":"13px","paddingLeft":"10px","paddingRight":"10px"},"backgroundColor":"#0a9e72","textColor":"#ffffff"} -->
+<h2 class="gb-headline gb-headline-2363388e gb-headline-text">Admission</h2>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/query-loop {"uniqueId":"192611e1","query":{"post_type":"post","per_page":"6"}} -->
+<!-- wp:generateblocks/grid {"uniqueId":"a9315330","columns":1,"verticalGap":5,"isDynamic":true,"blockVersion":3,"isQueryLoop":true,"lock":{"remove":true}} -->
+<!-- wp:generateblocks/container {"uniqueId":"10fb2e55","isGrid":true,"isQueryLoopItem":true,"gridId":"a9315330","isDynamic":true,"blockVersion":4,"sizing":{"width":"100%"},"spacing":{"paddingTop":"10px","paddingBottom":"8px","paddingLeft":"14px","paddingRight":"14px","marginBottom":"0px"},"borders":{"borderBottomWidth":"1px","borderBottomStyle":"solid","borderBottomColor":"#f0f5f2"},"lock":{"remove":true,"move":true}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"f979b3a9","element":"p","blockVersion":3,"typography":{"fontSize":"14px","fontWeight":"600"},"spacing":{"marginBottom":"3px"},"linkColor":"#1a1a1a","linkColorHover":"#0a9e72","useDynamicData":true,"dynamicContentType":"post-title","dynamicLinkType":"single-post"} -->
+<p class="gb-headline gb-headline-f979b3a9 gb-headline-text"></p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/query-loop -->
+
+<!-- wp:generateblocks/container {"uniqueId":"vm-box4","isDynamic":true,"blockVersion":4,"typography":{"textAlign":"center"},"spacing":{"paddingTop":"12px","paddingBottom":"12px","paddingLeft":"14px","paddingRight":"14px"},"borders":{"borderTopWidth":"1.5px","borderTopStyle":"solid","borderTopColor":"#e8f5ef"}} -->
+<!-- wp:generateblocks/button {"uniqueId":"vm-btn4","blockVersion":4,"display":"inline-flex","alignItems":"center","typography":{"fontWeight":"700","fontSize":"14px"},"spacing":{"paddingTop":"9px","paddingRight":"32px","paddingBottom":"9px","paddingLeft":"32px"},"borders":{"borderTopLeftRadius":"6px","borderTopRightRadius":"6px","borderBottomLeftRadius":"6px","borderBottomRightRadius":"6px"},"backgroundColor":"#0a9e72","backgroundColorHover":"#077a57","textColor":"#ffffff","textColorHover":"#ffffff"} -->
+<span class="gb-button gb-button-vm-btn4 gb-button-text">View More ›</span>
+<!-- /wp:generateblocks/button -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- ── BOX 5 ── -->
+<!-- wp:generateblocks/container {"uniqueId":"5b8618b1","isGrid":true,"gridId":"6c001c90","isDynamic":true,"blockVersion":4,"sizing":{"width":"33.33%","widthMobile":"100%","widthTablet":"50%"},"borders":{"borderTopWidth":"1.5px","borderRightWidth":"1.5px","borderBottomWidth":"1.5px","borderLeftWidth":"1.5px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"#d6ede5","borderRightColor":"#d6ede5","borderBottomColor":"#d6ede5","borderLeftColor":"#d6ede5","borderTopLeftRadius":"10px","borderTopRightRadius":"10px","borderBottomLeftRadius":"10px","borderBottomRightRadius":"10px"},"boxShadow":"0 3px 14px rgba(10,158,114,0.08)"} -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"9b89e6b6","blockVersion":3,"typography":{"textAlign":"center","fontSize":"19px","fontWeight":"800"},"spacing":{"marginBottom":"0px","paddingTop":"13px","paddingBottom":"13px","paddingLeft":"10px","paddingRight":"10px"},"backgroundColor":"#0a9e72","textColor":"#ffffff"} -->
+<h2 class="gb-headline gb-headline-9b89e6b6 gb-headline-text">Admit Card</h2>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/query-loop {"uniqueId":"d7782290","query":{"post_type":"post","per_page":"6"}} -->
+<!-- wp:generateblocks/grid {"uniqueId":"9b222bc7","columns":1,"verticalGap":5,"isDynamic":true,"blockVersion":3,"isQueryLoop":true,"lock":{"remove":true}} -->
+<!-- wp:generateblocks/container {"uniqueId":"9ce57fa2","isGrid":true,"isQueryLoopItem":true,"gridId":"9b222bc7","isDynamic":true,"blockVersion":4,"sizing":{"width":"100%"},"spacing":{"paddingTop":"10px","paddingBottom":"8px","paddingLeft":"14px","paddingRight":"14px","marginBottom":"0px"},"borders":{"borderBottomWidth":"1px","borderBottomStyle":"solid","borderBottomColor":"#f0f5f2"},"lock":{"remove":true,"move":true}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"9023e2f3","element":"p","blockVersion":3,"typography":{"fontSize":"14px","fontWeight":"600"},"spacing":{"marginBottom":"3px"},"linkColor":"#1a1a1a","linkColorHover":"#0a9e72","useDynamicData":true,"dynamicContentType":"post-title","dynamicLinkType":"single-post"} -->
+<p class="gb-headline gb-headline-9023e2f3 gb-headline-text"></p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/query-loop -->
+
+<!-- wp:generateblocks/container {"uniqueId":"vm-box5","isDynamic":true,"blockVersion":4,"typography":{"textAlign":"center"},"spacing":{"paddingTop":"12px","paddingBottom":"12px","paddingLeft":"14px","paddingRight":"14px"},"borders":{"borderTopWidth":"1.5px","borderTopStyle":"solid","borderTopColor":"#e8f5ef"}} -->
+<!-- wp:generateblocks/button {"uniqueId":"vm-btn5","blockVersion":4,"display":"inline-flex","alignItems":"center","typography":{"fontWeight":"700","fontSize":"14px"},"spacing":{"paddingTop":"9px","paddingRight":"32px","paddingBottom":"9px","paddingLeft":"32px"},"borders":{"borderTopLeftRadius":"6px","borderTopRightRadius":"6px","borderBottomLeftRadius":"6px","borderBottomRightRadius":"6px"},"backgroundColor":"#0a9e72","backgroundColorHover":"#077a57","textColor":"#ffffff","textColorHover":"#ffffff"} -->
+<span class="gb-button gb-button-vm-btn5 gb-button-text">View More ›</span>
+<!-- /wp:generateblocks/button -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- ── BOX 6 ── -->
+<!-- wp:generateblocks/container {"uniqueId":"33213bc4","isGrid":true,"gridId":"6c001c90","isDynamic":true,"blockVersion":4,"sizing":{"width":"33.33%","widthMobile":"100%","widthTablet":"50%"},"borders":{"borderTopWidth":"1.5px","borderRightWidth":"1.5px","borderBottomWidth":"1.5px","borderLeftWidth":"1.5px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"#d6ede5","borderRightColor":"#d6ede5","borderBottomColor":"#d6ede5","borderLeftColor":"#d6ede5","borderTopLeftRadius":"10px","borderTopRightRadius":"10px","borderBottomLeftRadius":"10px","borderBottomRightRadius":"10px"},"boxShadow":"0 3px 14px rgba(10,158,114,0.08)"} -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"efb9db7c","blockVersion":3,"typography":{"textAlign":"center","fontSize":"19px","fontWeight":"800"},"spacing":{"marginBottom":"0px","paddingTop":"13px","paddingBottom":"13px","paddingLeft":"10px","paddingRight":"10px"},"backgroundColor":"#0a9e72","textColor":"#ffffff"} -->
+<h2 class="gb-headline gb-headline-efb9db7c gb-headline-text">Results</h2>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/query-loop {"uniqueId":"124dd038","query":{"post_type":"post","per_page":"6"}} -->
+<!-- wp:generateblocks/grid {"uniqueId":"c55b2e9f","columns":1,"verticalGap":5,"isDynamic":true,"blockVersion":3,"isQueryLoop":true,"lock":{"remove":true}} -->
+<!-- wp:generateblocks/container {"uniqueId":"05e0176e","isGrid":true,"isQueryLoopItem":true,"gridId":"c55b2e9f","isDynamic":true,"blockVersion":4,"sizing":{"width":"100%"},"spacing":{"paddingTop":"10px","paddingBottom":"8px","paddingLeft":"14px","paddingRight":"14px","marginBottom":"0px"},"borders":{"borderBottomWidth":"1px","borderBottomStyle":"solid","borderBottomColor":"#f0f5f2"},"lock":{"remove":true,"move":true}} -->
+<!-- wp:generateblocks/headline {"uniqueId":"e60c9e92","element":"p","blockVersion":3,"typography":{"fontSize":"14px","fontWeight":"600"},"spacing":{"marginBottom":"3px"},"linkColor":"#1a1a1a","linkColorHover":"#0a9e72","useDynamicData":true,"dynamicContentType":"post-title","dynamicLinkType":"single-post"} -->
+<p class="gb-headline gb-headline-e60c9e92 gb-headline-text"></p>
+<!-- /wp:generateblocks/headline -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/query-loop -->
+
+<!-- wp:generateblocks/container {"uniqueId":"vm-box6","isDynamic":true,"blockVersion":4,"typography":{"textAlign":"center"},"spacing":{"paddingTop":"12px","paddingBottom":"12px","paddingLeft":"14px","paddingRight":"14px"},"borders":{"borderTopWidth":"1.5px","borderTopStyle":"solid","borderTopColor":"#e8f5ef"}} -->
+<!-- wp:generateblocks/button {"uniqueId":"vm-btn6","blockVersion":4,"display":"inline-flex","alignItems":"center","typography":{"fontWeight":"700","fontSize":"14px"},"spacing":{"paddingTop":"9px","paddingRight":"32px","paddingBottom":"9px","paddingLeft":"32px"},"borders":{"borderTopLeftRadius":"6px","borderTopRightRadius":"6px","borderBottomLeftRadius":"6px","borderBottomRightRadius":"6px"},"backgroundColor":"#0a9e72","backgroundColorHover":"#077a57","textColor":"#ffffff","textColorHover":"#ffffff"} -->
+<span class="gb-button gb-button-vm-btn6 gb-button-text">View More ›</span>
+<!-- /wp:generateblocks/button -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- /wp:generateblocks/grid -->
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
+
+<!-- SECTION 7: ABOUT ══════════════════════════════════════════ -->
+<!-- wp:generateblocks/container {"uniqueId":"ab-outer-01","isDynamic":true,"blockVersion":4,"spacing":{"paddingTop":"0px","paddingBottom":"40px","paddingLeftTablet":"16px","paddingRightTablet":"16px"}} -->
+<!-- wp:generateblocks/container {"uniqueId":"ab-inner-01","isDynamic":true,"blockVersion":4,"useGlobalMaxWidth":true,"spacing":{"marginRight":"auto","marginLeft":"auto"},"borders":{"borderTopWidth":"2px","borderRightWidth":"2px","borderBottomWidth":"2px","borderLeftWidth":"2px","borderTopStyle":"solid","borderRightStyle":"solid","borderBottomStyle":"solid","borderLeftStyle":"solid","borderTopColor":"#0a9e72","borderRightColor":"#0a9e72","borderBottomColor":"#0a9e72","borderLeftColor":"#0a9e72","borderTopLeftRadius":"10px","borderTopRightRadius":"10px","borderBottomLeftRadius":"10px","borderBottomRightRadius":"10px"}} -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"ab-title","blockVersion":3,"typography":{"textAlign":"center","fontSize":"20px","fontWeight":"800"},"spacing":{"marginBottom":"0px","paddingTop":"10px","paddingBottom":"10px","paddingLeft":"14px","paddingRight":"14px"},"backgroundColor":"#0a9e72","textColor":"#ffffff"} -->
+<h2 class="gb-headline gb-headline-ab-title gb-headline-text">Sarkari Result 2023</h2>
+<!-- /wp:generateblocks/headline -->
+
+<!-- wp:generateblocks/headline {"uniqueId":"ab-body","element":"p","blockVersion":3,"typography":{"textAlign":"left","fontSize":"14.5px"},"spacing":{"paddingTop":"18px","paddingBottom":"18px","paddingLeft":"20px","paddingRight":"20px"}} -->
+<p class="gb-headline gb-headline-ab-body gb-headline-text">Sarkari Result is India's most trusted platform for government job updates, exam results, admit cards, and admission notifications. Stay updated with the latest Sarkari Naukri across all states and central government departments. Our platform covers Railway, Banking, Police, Defense, Teaching and many more sectors to help aspirants achieve their dream government career.</p>
+<!-- /wp:generateblocks/headline -->
+
+<!-- /wp:generateblocks/container -->
+<!-- /wp:generateblocks/container -->
