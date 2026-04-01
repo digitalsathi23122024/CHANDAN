@@ -1,280 +1,876 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canva Pro Lifetime Membership</title>
-    <!-- Add the link to the Canva favicon -->
-    <link rel="icon" href="https://static.canva.com/static/images/favicon.ico" type="image/x-icon">
-
-    <!-- Open Graph meta tags for SEO -->
-    <meta property="og:title" content="Join Canva for Professional">
-    <meta property="og:description" content=" #ELITEKAMRUL Create and share professional designs with Canva. Join now for Canva for Professional(elitekamrul).">
-    <meta property="og:image" content="https://static.canva.com/anon_home/og-image-1200x630.jpg">
-    <meta property="og:url" content="Your page URL here">
+    <title>Times India News - Latest News & Updates</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3208/3208676.png" type="image/png">
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Stay updated with the latest news from Times India. Get breaking news, politics, sports, business, entertainment, technology, and world news.">
+    <meta name="keywords" content="news, breaking news, politics, sports, business, entertainment, technology, world news, times india">
+    <meta name="author" content="Times India News">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Times India News - Latest News & Updates">
+    <meta property="og:description" content="Your trusted source for breaking news and comprehensive coverage.">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Join Canva for Professional">
+    <meta property="og:url" content="https://chandanwb.me">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200&h=630">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Times India News - Latest News & Updates">
+    <meta name="twitter:description" content="Your trusted source for breaking news and comprehensive coverage.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1200&h=630">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Keywords meta tag -->
-    <meta name="keywords" content="Canva, Education, Design, Create, Professional, Join, elitekamrul">
-
+    
     <style>
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
+        :root {
+            --primary-color: #c41e3a;
+            --secondary-color: #1a1a1a;
+            --accent-color: #ffd700;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --border-color: #e9ecef;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(45deg, #cfd9df, #e2ebf0);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        * {
             margin: 0;
-            padding: 20px;
+            padding: 0;
             box-sizing: border-box;
         }
 
-        .content-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            width: 100%;
-            max-width: 1200px;
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--white);
         }
 
-        .ad-container {
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 8px 0;
+            font-size: 12px;
+        }
+
+        .top-bar-content {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
+        }
+
+        .social-links a {
+            color: var(--white);
+            margin: 0 8px;
+            font-size: 14px;
+        }
+
+        .main-header {
+            padding: 20px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 10px 40px 10px 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 25px;
+            width: 300px;
+            outline: none;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .search-btn {
             position: absolute;
+            right: 10px;
             top: 50%;
             transform: translateY(-50%);
-        }
-
-        .ad-container.left {
-            left: 0;
-        }
-
-        .ad-container.right {
-            right: 0;
-        }
-
-        .ad-box {
-            margin: 10px;
-            animation: bounce 2s infinite;
-        }
-
-        .ad-box:nth-child(1) {
-            animation-delay: 0s;
-        }
-
-        .ad-box:nth-child(2) {
-            animation-delay: 0.5s;
-        }
-
-        .ad-box:nth-child(3) {
-            animation-delay: 1s;
-        }
-
-        .ad-box:nth-child(4) {
-            animation-delay: 1.5s;
-        }
-
-        .ad-box img {
-            width: 100%;
-            max-width: 150px;
-            height: auto;
-        }
-
-        #container {
-            text-align: center;
-            padding: 2% 5%;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            z-index: 1;
-            width: 100%;
-            max-width: 400px; /* Reduced max-width for a smaller box */
-        }
-
-        h1 {
-            color: #3498db;
-            margin-bottom: 10px;
-        }
-
-        #canvaIcon {
-            width: 80%;
-            max-width: 80px;
-            margin-bottom: 10px;
-            filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.1));
-        }
-
-        #messengerContainer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 10px;
-        }
-
-        #messengerIcon {
-            width: 60%;
-            max-width: 40px;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        #messengerIcon:hover {
-            transform: scale(1.2);
-        }
-
-        #joinButton {
-            padding: 8px 16px;
-            font-size: 14px;
-            cursor: pointer;
-            background: #3498db;
-            color: #fff;
+            background: var(--primary-color);
             border: none;
-            border-radius: 10px;
-            transition: background 0.3s ease, transform 0.2s ease;
+            color: var(--white);
+            padding: 8px 12px;
+            border-radius: 50%;
+            cursor: pointer;
         }
 
-        #joinButton:hover {
-            background: #2ecc71;
-            transform: scale(1.05);
+        /* Navigation */
+        .navigation {
+            background: var(--primary-color);
         }
 
-        .cta-container {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .cta-container h1,
-        .cta-container p {
-            color: #2c3e50;
+        .nav-menu {
+            display: flex;
+            list-style: none;
             margin: 0;
+            padding: 0;
         }
 
-        .cta-container p {
-            margin-top: 5px;
+        .nav-menu li a {
+            display: block;
+            padding: 15px 20px;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            text-transform: uppercase;
             font-size: 14px;
+            transition: var(--transition);
         }
 
+        .nav-menu li a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Breaking News */
+        .breaking-news {
+            background: var(--accent-color);
+            padding: 12px 0;
+            overflow: hidden;
+        }
+
+        .breaking-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .breaking-label {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-right: 20px;
+            border-radius: 3px;
+            white-space: nowrap;
+        }
+
+        .breaking-text {
+            color: var(--secondary-color);
+            font-weight: 500;
+            white-space: nowrap;
+            animation: marquee 40s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 40px 0;
+            background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .featured-article {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 500px;
+        }
+
+        .featured-article img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .featured-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 40px;
+            color: var(--white);
+        }
+
+        .featured-category {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 6px 12px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .featured-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .featured-meta {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .trending-news {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        .trending-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .trending-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .trending-item:last-child {
+            border-bottom: none;
+        }
+
+        .trending-number {
+            background: var(--primary-color);
+            color: var(--white);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .trending-content h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        .trending-content p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* News Categories */
+        .news-categories {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 50px;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .category-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .category-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .category-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .category-card p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+        }
+
+        .read-more:hover {
+            background: var(--secondary-color);
+            color: var(--white);
+        }
+
+        /* Template Showcase */
+        .template-showcase {
+            padding: 60px 0;
+            background: var(--light-bg);
+        }
+
+        .showcase-content {
+            text-align: center;
+        }
+
+        .showcase-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .showcase-description {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .download-btn {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+            margin: 10px;
+        }
+
+        .download-btn:hover {
+            background: var(--secondary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 40px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            padding: 5px 0;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            color: #ccc;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .ad-container {
-                position: static;
-                flex-direction: row;
-                justify-content: center;
-                transform: none;
-                margin-bottom: 20px;
-            }
-
-            .ad-box img {
-                max-width: 100px;
-            }
-
-            .content-wrapper {
+            .header-content {
                 flex-direction: column;
+                gap: 20px;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+            }
+
+            .nav-menu li a {
+                padding: 12px 15px;
+                font-size: 12px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .featured-title {
+                font-size: 1.8rem;
+            }
+
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            .featured-overlay {
+                padding: 20px;
+            }
+
+            .featured-title {
+                font-size: 1.5rem;
+            }
+
+            .trending-news {
+                padding: 20px;
+            }
+
+            .category-card {
+                padding: 20px;
             }
         }
     </style>
 </head>
 
 <body>
-
-    <div class="content-wrapper">
-        <div class="ad-container left">
-            <div class="ad-box">
-                <a href="https://portal.hostever.com/aff.php?aff=1522">
-                    <img src="https://i.ibb.co/F404v0P/250-By-250.jpg" alt="Ad 1">
-                </a>
-            </div>
-            <div class="ad-box">
-                <a href="https://portal.hostever.com/aff.php?aff=1522">
-                    <img src="https://i.ibb.co/F404v0P/250-By-250.jpg" alt="Ad 2">
-                </a>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="date-time">
+                        <span id="current-date">Loading...</span>
+                        <span>|</span>
+                        <span id="current-time">Loading...</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div id="container">
-            <img src="https://static.canva.com/web/images/12487a1e0770d29351bd4ce4f87ec8fe.svg" alt="Canva Icon" id="canvaIcon">
-            <div class="cta-container">
-                <h1>What will you <span style="color: #3498db;">design</span> today?</h1>
-                <p>Canva makes it easy to create and share professional designs.</p>
+        <div class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <a href="#" class="logo">Times India News</a>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search news...">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
             </div>
-
-            <!-- Messenger Icon and Text -->
-            <div id="messengerContainer">
-                <a href="https://m.me/elitekamrul" target="_blank">
-                    <img src="https://i.ibb.co/Y04Dpx6/120009688-325579128711709-1736249742330805861-n.png" alt="Messenger Icon" id="messengerIcon">
-                </a>
-                <p>Click to chat on Messenger</p>
-            </div>
-
-            <h1> JOIN CANVA PRO FOR FREE! </h1>
-            <button id="joinButton">Join Now</button>
         </div>
 
-        <div class="ad-container right">
-            <div class="ad-box">
-                <a href="https://portal.hostever.com/aff.php?aff=1522">
-                    <img src="https://i.ibb.co/F404v0P/250-By-250.jpg" alt="Ad 3">
-                </a>
+        <nav class="navigation">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Entertainment</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Health</a></li>
+                    <li><a href="#">World</a></li>
+                </ul>
             </div>
-            <div class="ad-box">
-                <a href="https://portal.hostever.com/aff.php?aff=1522">
-                    <img src="https://i.ibb.co/F404v0P/250-By-250.jpg" alt="Ad 4">
-                </a>
+        </nav>
+    </header>
+
+    <!-- Breaking News -->
+    <div class="breaking-news">
+        <div class="container">
+            <div class="breaking-content">
+                <div class="breaking-label">Breaking News</div>
+                <div class="breaking-text">
+                    Major political developments unfold as parliament discusses new legislation • 
+                    Sports championship finals set for this weekend with record viewership expected • 
+                    Technology sector shows unprecedented growth in Q4 earnings reports • 
+                    International summit addresses climate change initiatives
+                </div>
             </div>
         </div>
     </div>
 
-    <script>
-        document.getElementById('joinButton').addEventListener('click', function () {
-            // Replace the URL with the Canva join URL
-            var canvaJoinUrl = 'https://www.canva.com/brand/join?token=m4lGhmV5h6M3AYk7NjM_Zw&brandingVariant=edu&referrer=team-invite';
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="featured-article">
+                    <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&h=500&fit=crop" alt="Featured News">
+                    <div class="featured-overlay">
+                        <div class="featured-category">Breaking News</div>
+                        <h2 class="featured-title">Major Political Development Shapes National Policy</h2>
+                        <div class="featured-meta">
+                            <i class="far fa-clock"></i> 2 hours ago • By John Reporter
+                        </div>
+                    </div>
+                </div>
 
-            // Open the Canva join URL in a new tab
-            window.open(canvaJoinUrl, '_blank');
+                <div class="trending-news">
+                    <h3 class="trending-title">Trending Now</h3>
+                    <div class="trending-item">
+                        <div class="trending-number">1</div>
+                        <div class="trending-content">
+                            <h4>Economic Summit Addresses Global Trade Issues</h4>
+                            <p>World leaders gather to discuss international commerce</p>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-number">2</div>
+                        <div class="trending-content">
+                            <h4>Championship Finals Draw Record Audience</h4>
+                            <p>Sports event achieves highest viewership in history</p>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-number">3</div>
+                        <div class="trending-content">
+                            <h4>Technology Innovation Breakthrough Announced</h4>
+                            <p>Scientific advancement promises revolutionary changes</p>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-number">4</div>
+                        <div class="trending-content">
+                            <h4>Environmental Initiative Gains International Support</h4>
+                            <p>Climate action receives backing from major nations</p>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <div class="trending-number">5</div>
+                        <div class="trending-content">
+                            <h4>Cultural Festival Celebrates Diversity</h4>
+                            <p>Annual event showcases global traditions and arts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Categories -->
+    <section class="news-categories">
+        <div class="container">
+            <h2 class="section-title">News Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>Politics</h3>
+                    <p>Stay informed about political developments, policy changes, and government decisions that impact society.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-football-ball"></i>
+                    </div>
+                    <h3>Sports</h3>
+                    <p>Get the latest updates on sports events, match results, player transfers, and championship news.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Business</h3>
+                    <p>Follow market trends, company earnings, economic indicators, and business innovation stories.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Entertainment</h3>
+                    <p>Discover the latest in movies, music, celebrity news, and entertainment industry updates.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Technology</h3>
+                    <p>Explore cutting-edge innovations, gadget reviews, and technological breakthroughs.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>World News</h3>
+                    <p>Stay updated with international affairs, global events, and worldwide developments.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Template Showcase -->
+    <section class="template-showcase">
+        <div class="container">
+            <div class="showcase-content">
+                <h2 class="showcase-title">Professional Blogger News Template</h2>
+                <p class="showcase-description">
+                    Experience a fully customized blogger news website template designed like Times of India. 
+                    Features responsive design, SEO optimization, multiple news categories, breaking news ticker, 
+                    and professional layout perfect for news websites and blogs.
+                </p>
+                <a href="times-india-news-template.xml" class="download-btn" download>
+                    <i class="fas fa-download"></i>
+                    Download Template
+                </a>
+                <a href="#" class="download-btn" style="background: #28a745;">
+                    <i class="fas fa-eye"></i>
+                    Live Preview
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Times India News</h3>
+                    <p>Your trusted source for breaking news, comprehensive coverage, and in-depth analysis of events that matter. We deliver authentic journalism with integrity.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>News Categories</h3>
+                    <ul>
+                        <li><a href="#">Politics</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Entertainment</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">World News</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Times India News. All rights reserved. | Designed for professional news coverage</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Update Date and Time
+        function updateDateTime() {
+            const now = new Date();
+            const dateOptions = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            const timeOptions = { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                hour12: true
+            };
+            
+            document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', dateOptions);
+            document.getElementById('current-time').textContent = now.toLocaleTimeString('en-US', timeOptions);
+        }
+
+        // Update time every minute
+        updateDateTime();
+        setInterval(updateDateTime, 60000);
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Search functionality
+        document.querySelector('.search-btn').addEventListener('click', function() {
+            const searchInput = document.querySelector('.search-box input');
+            const query = searchInput.value.trim();
+            if (query) {
+                alert(`Searching for: ${query}`);
+            }
+        });
+
+        // Enter key search
+        document.querySelector('.search-box input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const query = this.value.trim();
+                if (query) {
+                    alert(`Searching for: ${query}`);
+                }
+            }
+        });
+
+        // Add loading animation to download button
+        document.querySelector('.download-btn').addEventListener('click', function(e) {
+            const btn = this;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing Download...';
+            btn.style.pointerEvents = 'none';
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.pointerEvents = 'auto';
+            }, 2000);
         });
     </script>
-
-    <!--
-    <script>
-        document.getElementById('joinButton').addEventListener('click', function () {
-            // Replace the URL with the Canva join URL
-            var canvaJoinUrl = 'https://www.canva.com/brand/join?token=4ZvEjvwhCqR1Dr6zB5fBIA&brandingVariant=edu&referrer=team-invite';
-
-            // Open the Canva join URL in a new tab
-            window.open(canvaJoinUrl, '_blank');
-        });
-    </script>
-    -->
-
-        <!--
-    <script>
-        document.getElementById('joinButton').addEventListener('click', function () {
-            // Replace the URL with the Canva join URL
-            var canvaJoinUrl = 'https://www.canva.com/brand/join?token=pS7FkPAhir9xZJOdhxa34w&brandingVariant=edu&referrer=team-invite';
-
-            // Open the Canva join URL in a new tab
-            window.open(canvaJoinUrl, '_blank');
-        });
-    </script>
-    -->
-
 </body>
-
 </html>
